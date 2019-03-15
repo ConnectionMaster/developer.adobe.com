@@ -19,8 +19,9 @@
     "test": "npm run lint && npm run test:helix-config && npm run test:unit && npm run test:e2e-helix-local",
     "build": "hlx clean && hlx build",
     "deploy": "hlx deploy --no-auto --default HTTP_TIMEOUT 5000",
-    "publish": "hlx publish",
-    "start": "hlx up --host adobedevsite.helix-demo.xyz --local-repo=."
+    "publish": "hlx publish --remote",
+    "start": "hlx up --host adobedevsite.helix-demo.xyz --local-repo=.",
+    "dev": "browser-sync start --proxy 'localhost:3000' --files 'src/*.*' 'htdocs/*.*'"
   },
   "repository": {
     "type": "git",
