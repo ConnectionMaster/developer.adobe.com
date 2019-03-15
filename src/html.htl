@@ -67,7 +67,7 @@
             </li>
         </ul>
     </nav>
-    <div class="spectrum-grid--fluid" style="padding: 0 8px;">
+    <div class="spectrum-grid--fluid">
         <esi:include src="${payload.dispatch.url}" />
     </div>
     <nav id="footer" class="spectrum--darkest">
