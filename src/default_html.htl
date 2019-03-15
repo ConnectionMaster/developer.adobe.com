@@ -1,54 +1,119 @@
 <div class="container spectrum-grid-row">
-  <div class="section index0 odd has-paragraph has-heading has-inlineCode nb-paragraph-1 nb-heading-1 nb-inlineCode-1 is-paragraph-heading-inlineCode is-paragraph-heading is-paragraph spectrum-grid-col-sm-12 spectrum-grid-col-md-6 spectrum--dark">
-    <p class="spectrum-Body5"><code class="spectrum-Code5">Find what you're looking for</code></p>
-    <h2 class="spectrum-Heading2">Do More with Adobe</h2>
-    <p class="spectrum-Body3">Customize and extend Adobe’s products to create better customer experiences with our APIs, help guides and community support.</p>
+
+  <!-- Search -->
+  <div class="spectrum-grid-col-sm-12 spectrum-grid-col-md-6 spectrum--dark">
+    <p class="spectrum-Body5">
+      Find what you're looking for
+    </p>
+    <h2 class="spectrum-Heading2">
+      Do More with Adobe
+    </h2>
+    <p class="spectrum-Body3">
+      Customize and extend Adobe’s products to create better customer experiences with our APIs, 
+      help guides and community support.
+    </p>
     <div class="search-control">
-      <div class="spectrum-DecoratedTextfield is-decorated">
-        <label for="search-input" class="spectrum-FieldLabel">Search our products and documentation</label>
-        <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Icon--sizeS spectrum-DecoratedTextfield-icon" focusable="false" aria-hidden="true" style="color: rgb(75, 75, 75);transform: rotate(90deg);margin-left:10px;">
+      <div class="spectrum-DecoratedTextfield">
+        <label for="search-input" class="spectrum-FieldLabel">
+          Search our products and documentation
+        </label>
+        <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Icon--sizeS spectrum-DecoratedTextfield-icon" 
+          focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Magnifier"></use>
         </svg>
-        <input id="search-input" class="spectrum-Textfield spectrum-DecoratedTextfield-field" aria-invalid="false" type="text" style="background-color: rgb(255, 255, 255);border-color: rgb(225, 225, 225);color: rgb(75, 75, 75); border-radius: 30px;">
+        <input id="search-input" class="spectrum-Textfield spectrum-DecoratedTextfield-field" 
+          aria-invalid="false" type="text" >
       </div>
     </div>
   </div>
-  <div class="section index1 even has-link has-paragraph has-heading has-image has-inlineCode nb-link-2 nb-paragraph-1 nb-heading-1 nb-image-1 nb-inlineCode-1 is-link-paragraph-heading is-link-paragraph is-link spectrum-grid-col-sm-12 spectrum-grid-col-md-6">
+
+  <!-- Creative Cloud -->
+  <div class="spectrum-grid-col-sm-12 spectrum-grid-col-md-6">
     <p class="spectrum-Body5">
       <img src="https://www.adobe.io/content/dam/udp/language-masters/en/xd_logo_43733775.svg" alt="XD Logo">
-      <code class="spectrum-Code5">The future of extending creative cloud apps</code>
+      The future of extending creative cloud apps
     </p>
-    <h1 class="spectrum-Heading1">Start Building with Adobe XD today</h1>
-    <p class="spectrum-Body3">Create XD plugins to push the boundaries of experience design by adding new features to <a href="https://adobexdplatform.com/" class="spectrum-Link">Adobe XD</a>, automating workflows, connecting XD to external services, and more—all on a quick, modern JavaScript engine with native UI components.</p>
-    <p class="spectrum-Body3">Let’s supercharge the future of design together with XD plugins.</p>
-    <p class="spectrum-Body3"><a href="/xd/docs" class="spectrum-Link spectrum-Button spectrum-Button--primary">See What’s Possible</a></p>
+    <h1 class="spectrum-Heading1">
+      Start Building with Adobe XD today
+    </h1>
+    <p class="spectrum-Body3">
+      Create XD plugins to push the boundaries of experience design by adding new features to 
+      <a href="https://adobexdplatform.com/" class="spectrum-Link">Adobe XD</a>, automating workflows, 
+      connecting XD to external services, and more—all on a quick, modern JavaScript engine with native UI components.
+    </p>
+    <p class="spectrum-Body3">
+      Let’s supercharge the future of design together with XD plugins.
+    </p>
+    <p class="spectrum-Body3">
+      <a href="/xd/docs" class="spectrum-Link spectrum-Button spectrum-Button--primary">See What’s Possible</a>
+    </p>
   </div>
-  <div class="section index2 odd has-list has-paragraph has-heading nb-list-2 nb-paragraph-2 nb-heading-3 is-heading-list-paragraph is-heading-list is-heading spectrum-grid-col-sm-12 spectrum-grid-col-md-6 spectrum--dark">
-    <h2 class="spectrum-Heading2">Authentication Guides</h2>
-    <div class="guide-indent">
-      <h3 class="spectrum-Heading3">OAuth 2.0</h3>
-      <p class="spectrum-Body4">Adobe Cloud Platform APIs use the OAuth 2.0 protocol for authentication and authorization.</p>
-      <ul class="removeStyle">
-        <li class="spectrum-Body3 li-no-margin-bottom"><a href="https://adobeioruntime.net/api/v1/web/io-solutions/adobe-oauth-playground/oauth.html" class="spectrum-Link spectrum-Button spectrum-Button--cta button-read">Read our Guide</a></li>
-        <li class="spectrum-Body3 li-no-margin-bottom"><a href="" class="spectrum-Link spectrum-Button spectrum-Button--primary">Generate Tokens</a></li>
+
+  <!-- Authentication Guides -->
+  <div class="spectrum-grid-col-sm-12 spectrum-grid-col-md-6 spectrum--dark">
+    <h2 class="spectrum-Heading2">
+      Authentication Guides
+    </h2>
+    <div>
+      <h3 class="spectrum-Heading3">
+        OAuth 2.0
+      </h3>
+      <p class="spectrum-Body4">
+        Adobe Cloud Platform APIs use the OAuth 2.0 protocol for authentication and authorization.
+      </p>
+      <ul>
+        <li class="spectrum-Body3">
+          <a href="https://adobeioruntime.net/api/v1/web/io-solutions/adobe-oauth-playground/oauth.html" 
+            class="spectrum-Link spectrum-Button spectrum-Button--cta">
+            Read our Guide
+          </a>
+        </li>
+        <li class="spectrum-Body3">
+          <a href="" class="spectrum-Link spectrum-Button spectrum-Button--primary">
+            Generate Tokens
+          </a>
+        </li>
       </ul>
     </div>
-    <div class="guide-indent">
-      <h3 class="spectrum-Heading3">JWT Quickstart</h3>
-      <p class="spectrum-Body4">API services tied to entitled Adobe products require a JSON Web Token (JWT) to retrieve access tokens for usage against authenticated endpoints</p>
-      <ul class="removeStyle">
-        <li class="spectrum-Body3 li-no-margin-bottom"><a href="https://www.adobe.io/authentication/auth-methods.html#!adobeio/adobeio-documentation/master/auth/JWTAuthenticationQuickStart.md" class="spectrum-Link spectrum-Button spectrum-Button--cta button-read">Read our Guide</a></li>
+    <div>
+      <h3 class="spectrum-Heading3">
+        JWT Quickstart
+      </h3>
+      <p class="spectrum-Body4">
+        API services tied to entitled Adobe products require a JSON Web Token (JWT) to retrieve access 
+        tokens for usage against authenticated endpoints.
+      </p>
+      <ul>
+        <li class="spectrum-Body3">
+          <a href="https://www.adobe.io/authentication/auth-methods.html#!adobeio/adobeio-documentation/master/auth/JWTAuthenticationQuickStart.md" class="spectrum-Link spectrum-Button spectrum-Button--cta button-read">
+            Read our Guide
+          </a>
+        </li>
       </ul>
     </div>
   </div>
-  <div class="section index3 even has-link has-paragraph has-heading has-image has-inlineCode nb-link-1 nb-paragraph-1 nb-heading-1 nb-image-1 nb-inlineCode-1 is-link-paragraph-heading is-link-paragraph is-link spectrum-grid-col-sm-12 spectrum-grid-col-md-6">
+
+  <!-- Product Spotlight -->
+  <div class="spectrum-grid-col-sm-12 spectrum-grid-col-md-6">
     <p class="spectrum-Body5">
       <img src="https://www.adobe.com/content/dam/www/icons/analytics-cloud.svg" alt="Adobe Analytics Logo">
-      <code class="spectrum-Code5">Product Spotlight</code>
+      <code class="spectrum-Code5">
+        Product Spotlight
+      </code>
     </p>
-    <h2 class="spectrum-Heading2">Adobe Analytics APIs</h2>
-    <p class="spectrum-Body4">The Adobe Analytics APIs are a collection of APIs that power Adobe Analytics products like Analysis Workspace. The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data. You can also create reports to explore, get insights, or answer important questions about your data.</p>
-    <p class="spectrum-Body3"><a href="" class="spectrum-Link spectrum-Button spectrum-Button--cta">Read the Docs</a></p>
+    <h2 class="spectrum-Heading2">
+      Adobe Analytics APIs
+    </h2>
+    <p class="spectrum-Body4">
+      The Adobe Analytics APIs are a collection of APIs that power Adobe Analytics products like Analysis Workspace. 
+      The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data. 
+      You can also create reports to explore, get insights, or answer important questions about your data.
+    </p>
+    <p class="spectrum-Body3">
+      <a href="" class="spectrum-Link spectrum-Button spectrum-Button--cta">
+        Read the Docs
+      </a>
+    </p>
   </div>
   <esi:include src="index.feed.html" />
   <div id="top-github-repos" class="section index5 odd has-heading nb-heading-1 is-heading-only spectrum-grid-col-sm-12 spectrum-grid-col-md-6 spectrum--dark">
@@ -61,57 +126,100 @@
       </svg>
       Adobe on GitHub
     </h2>
-    <h4 class="spectrum-Heading4">spectrum-css</h4>
-    <code class="spectrum-Code5"><strong>CSS ⭑ 105</strong></code>
-    <p class="spectrum-Body4">The standard CSS implementation of the Spectrum design language.</p>
-    <a class="spectrum-Link--quiet" href="https://github.com/adobe/spectrum-css"><strong>
-      View On GitHub<svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="View on GitHub">
-        <use xlink:href="#spectrum-icon-18-LinkOut" />
-      </svg>
-    </strong></a>
-    <hr class="spectrum-Rule spectrum-Rule--medium">
-    <h4 class="spectrum-Heading4">magento2</h4>
-    <code class="spectrum-Code5"><strong>PHP ⭑ 6.9k</strong></code>
-    <p class="spectrum-Body4">A cutting-edge, feature-rich eCommerce solution that gets results.</p>
-    <a class="spectrum-Link--quiet" href="https://github.com/magento/magento2"><strong>
-      View On GitHub<svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="View on GitHub">
-        <use xlink:href="#spectrum-icon-18-LinkOut" />
-      </svg>
-    </strong></a>
-    <hr class="spectrum-Rule spectrum-Rule--medium">
-    <h4 class="spectrum-Heading4">XDM</h4>
-    <code class="spectrum-Code5"><strong>JavaScript ⭑ 79</strong></code>
-    <p class="spectrum-Body4">The Experience Data Model (XDM) is the language of digital experiences.</p>
-    <a class="spectrum-Link--quiet" href="https://github.com/adobe/xdm"><strong>
-      View On GitHub<svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="View on GitHub">
-        <use xlink:href="#spectrum-icon-18-LinkOut" />
-      </svg>
-    </strong></a>
-    <hr class="spectrum-Rule spectrum-Rule--medium">
-    <h4 class="spectrum-Heading4">brackets</h4>
-    <code class="spectrum-Code5"><strong>JavaScript ⭑ 29.6k</strong></code>
-    <p class="spectrum-Body4">An open source code editor for the web, written in JavaScript, HTML and CSS.</p>
-    <a class="spectrum-Link--quiet" href="https://github.com/adobe/brackets"><strong>
-      View On GitHub<svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="View on GitHub">
-        <use xlink:href="#spectrum-icon-18-LinkOut" />
-      </svg>
-    </strong></a>
+    <h4 class="spectrum-Heading4">
+      spectrum-css
+    </h4>
+    <code class="spectrum-Code5">
+      CSS ⭑ 105
+    </code>
+    <p class="spectrum-Body4">
+      The standard CSS implementation of the Spectrum design language.
+    </p>
+    <a class="spectrum-Link--quiet" href="https://github.com/adobe/spectrum-css">
+      <strong>
+        View On GitHub
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="View on GitHub">
+          <use xlink:href="#spectrum-icon-18-LinkOut" />
+        </svg>
+      </strong>
+    </a>
+    <hr class="spectrum-Rule spectrum-Rule--medium" />
+    <h4 class="spectrum-Heading4">
+      magento2
+    </h4>
+    <code class="spectrum-Code5">
+      PHP ⭑ 6.9k
+    </code>
+    <p class="spectrum-Body4">
+      A cutting-edge, feature-rich eCommerce solution that gets results.
+    </p>
+    <a class="spectrum-Link--quiet" href="https://github.com/magento/magento2">
+      <strong>
+        View On GitHub
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="View on GitHub">
+          <use xlink:href="#spectrum-icon-18-LinkOut" />
+        </svg>
+      </strong>
+    </a>
+    <hr class="spectrum-Rule spectrum-Rule--medium" />
+    <h4 class="spectrum-Heading4">
+      XDM
+    </h4>
+    <code class="spectrum-Code5">
+      <strong>JavaScript ⭑ 79</strong>
+    </code>
+    <p class="spectrum-Body4">
+      The Experience Data Model (XDM) is the language of digital experiences.
+    </p>
+    <a class="spectrum-Link--quiet" href="https://github.com/adobe/xdm">
+      <strong>
+        View On GitHub
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="View on GitHub">
+          <use xlink:href="#spectrum-icon-18-LinkOut" />
+        </svg>
+      </strong>
+    </a>
+    <hr class="spectrum-Rule spectrum-Rule--medium" />
+    <h4 class="spectrum-Heading4">
+      brackets
+    </h4>
+    <code class="spectrum-Code5">
+      <strong>JavaScript ⭑ 29.6k</strong>
+    </code>
+    <p class="spectrum-Body4">
+      An open source code editor for the web, written in JavaScript, HTML and CSS.
+    </p>
+    <a class="spectrum-Link--quiet" href="https://github.com/adobe/brackets">
+      <strong>
+        View On GitHub
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="View on GitHub">
+          <use xlink:href="#spectrum-icon-18-LinkOut" />
+        </svg>
+      </strong>
+    </a>
     <p>
       <a role="button" href="#" class="spectrum-Button spectrum-Button--primary">
         <span class="spectrum-Button-label">Open Source at Adobe</span>
       </a>
     </p>
   </div>
-  <div class="section index6 even spectrum-grid-col-sm-12 spectrum-grid-col-md-6 spectrum--darkest">
-    <h2 class="spectrum-Heading2--quiet"><strong>Sign up</strong> for our developer newsletter</h2>
+
+  <!-- Newsletter Signup -->
+  <div class="spectrum-grid-col-sm-12 spectrum-grid-col-md-6 spectrum--darkest">
+    <h2 class="spectrum-Heading2--quiet">
+      <strong>Sign up</strong> for our developer newsletter
+    </h2>
     <div class="newsletter-control">
       <div class="spectrum-DecoratedTextfield">
-        <label for="email-input" class="spectrum-FieldLabel">Enter your email address</label>
+        <label for="email-input" class="spectrum-FieldLabel">
+          Enter your email address
+        </label>
         <button id="newsletter-submit" class="spectrum-Button spectrum-Button--primary spectrum-DecoratedTextfield-icon">
           <span class="spectrum-Button-label">Subscribe →</span>
         </button>
-        <input id="email-input" class="spectrum-Textfield" aria-invalid="false" type="text" style="background-color: rgb(255, 255, 255);border-color: rgb(225, 225, 225);color: rgb(75, 75, 75); border-radius: 30px;">
+        <input id="email-input" class="spectrum-Textfield" aria-invalid="false" type="text" />
       </div>
     </div>
   </div>
+
 </div>
