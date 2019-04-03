@@ -12,22 +12,35 @@
 */
 -->
 <!DOCTYPE html>
-<html class="spectrum--large">
+<html class="spectrum--large" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="icon" href="/static/favicon.ico" />
-    <link rel="stylesheet" href="/static/spectrum-core.css" />
-    <link rel="stylesheet" href="/static/spectrum-core-diff.css" />
-    <link rel="stylesheet" href="/static/spectrum-light.css" />
-    <link rel="stylesheet" href="/static/spectrum-lightest.css" />
-    <link rel="stylesheet" href="/static/spectrum-dark.css" />
-    <link rel="stylesheet" href="/static/spectrum-darkest.css" />
-    <link rel="stylesheet" href="/static/spectrum-flexbox-grid.css" />
+    <link rel="stylesheet" href="/static/spectrum/spectrum-core.css" />
+    <link rel="stylesheet" href="/static/spectrum/spectrum-core-diff.css" media="(min-width: 900px)" />
+    <!--
+        TODO: each component should require the necessary spectrum color stops
+        instead of loading them all up front.
+    -->
+    <link rel="stylesheet" href="/static/spectrum/spectrum-light.css" />
+    <link rel="stylesheet" href="/static/spectrum/spectrum-lightest.css" />
+    <link rel="stylesheet" href="/static/spectrum/spectrum-dark.css" />
+    <link rel="stylesheet" href="/static/spectrum/spectrum-darkest.css" />
+    <link rel="stylesheet" href="/static/spectrum/spectrum-css-grid.css" />
+    <!--
+        TODO: global application frame elements should be componentized. For example, all
+        topnav markup, styling and CSS should be kept together and then included in this
+        master template at build time (using the esi:* syntax?) to keep things more
+        organized.
+    -->
     <link rel="stylesheet" href="/static/global/frame.css" />
     <link rel="stylesheet" href="/static/global/topnav.css" />
     <link rel="stylesheet" href="/static/global/footer.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ehj8kyw.css">
-    <script src="/static/icons/loadIcons.js" type="text/javascript"></script>
+    <script src="/static/spectrum/icons/loadIcons.js" type="text/javascript"></script>
+    <!--
+        TODO: add better meta data attributes for SEO etc.
+    -->
     <title>${content.title}</title>
 </head>
 
@@ -67,9 +80,7 @@
             </li>
         </ul>
     </nav>
-    <div class="spectrum-grid--fluid">
-        <esi:include src="${payload.dispatch.url}" />
-    </div>
+    <esi:include src="${payload.dispatch.url}" />
     <nav id="footer" class="spectrum--darkest">
         <svg id="dark_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" focusable="false">
             <path fill="#FF0000" d="M15.1,0H24v20L15.1,0z M8.9,0H0v20L8.9,0z M12,7.4L17.6,20h-3.8l-1.6-4H8.1L12,7.4z"></path>
@@ -129,8 +140,9 @@
         </div>
     </nav>
     <script type="text/javascript">
-        window.loadIcons('/static/icons/spectrum-css-icons.svg');
-        window.loadIcons('/static/icons/spectrum-icons.svg');
+        // TODO: icons should be inlined as part of helix build
+        window.loadIcons('/static/spectrum/icons/spectrum-css-icons.svg');
+        window.loadIcons('/static/spectrum/icons/spectrum-icons.svg');
         // Enable footer accordion
         document.querySelectorAll('#footer .spectrum-Accordion-itemHeader').forEach(function(header) {
             header.addEventListener('click', function(evt) {
