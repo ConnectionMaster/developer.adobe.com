@@ -119,56 +119,45 @@ function assembleEditUrl(owner, repo, ref, path, logger) {
  * @param String ref Ref
  * @param {Object} logger Logger
  */
-function computeNavPath(isDev, logger, mountPoint) {
+async function computeNavPath(apiRoot, owner, repo, ref, isDev, logger, mountPoint) {
   logger.debug('docs_html.pre.js - Fetching the nav');
 
-  /*
   // fetch the whole tree...
   const options = {
-    uri: `${apiRoot}` +
-      'repos/' +
-      `${owner}` +
-      '/' +
-      `${repo}` +
-      '/git/trees/' +
-      `${ref}` +
-      '?recursive=1',
+    uri: `${apiRoot}repos/${owner}/${repo}/git/trees/${ref}?recursive=1`,
     headers: {
       'User-Agent': 'Request-Promise',
     },
     json: true,
   };
 
-  logger.debug(`docs_html.pre.js - Fetching... ${options.uri}`);
-  const json = await request(options);
-
-  // ...to find the "closest" SUMMARY.md
-  let currentFolderPath = path.substring(0, path.lastIndexOf('/'));
-
   let summaryPath;
-  while (!summaryPath && currentFolderPath.length > 0) {
-    json.tree.forEach(function (item) {
-      if ('/' + item.path == currentFolderPath + '/SUMMARY.md') {
-        summaryPath = '/' + item.path;
+  const validMd = ['SUMMARY.md', 'TOC.md'];
+
+  // iterate over each file and search for SUMMARY.md or TOC.md
+  try {
+    logger.debug(`docs_html.pre.js - Fetching... ${options.uri}`);
+    const json = await request(options);
+
+    json.tree.every((item) => {
+      const pathArray = item.path.split('/');
+      const file = pathArray[pathArray.length - 1];
+      if (!summaryPath) {
+        if (validMd.includes(file)) {
+          // Strip .md extension
+          summaryPath = `${mountPoint}/${item.path.substring(0, item.path.indexOf('.md'))}`;
+          return false;
+        }
       }
+      return true;
     });
-    currentFolderPath = currentFolderPath.substring(0, currentFolderPath.lastIndexOf('/'));
+  } catch (e) {
+    throw new Error(e);
   }
-
-  summaryPath = summaryPath ? summaryPath.replace('.md', '') : '';
-  */
-
-  /*
-  if (!isDev) {
-    const summaryPath = 'https://www.project-helix.io/SUMMARY';
-    return summaryPath;
-  } */
-  const summaryPath = `${mountPoint}/SUMMARY`;
-  // TODO: add mount point to the summary
-  // const summaryPath = '/starter/docs/SUMMARY';
-  logger.debug(`docs_html.pre.js - Development path to SUMMARY.md to generate nav: ${summaryPath}`);
+  logger.debug(`docs_html.pre.js - Development path to valid md files to generate nav: ${summaryPath}`);
   return summaryPath;
 }
+
 
 /**
  * Creates the TOC (table of contents) from the children
@@ -252,7 +241,11 @@ async function pre(payload, action) {
       // TODO find a better way or implement one
       const isDev = action.request.headers.host ? action.request.headers.host.indexOf('localhost') !== -1 : false;
 
-      p.content.nav = computeNavPath(
+      p.content.nav = await computeNavPath(
+        secrets.REPO_API_ROOT,
+        actionReq.params.owner,
+        actionReq.params.repo,
+        actionReq.params.ref,
         isDev,
         logger,
         action.request.params.rootPath,
