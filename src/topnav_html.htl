@@ -1,138 +1,135 @@
 <style>
-    .navbar {
-        padding: 8px;
+    .AD-topbar {
+        position: relative;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        background:#fff;
     }
 
-    .main-nav {
-        padding-left: 20px;
+    .AD-topbar a {
+        text-decoration: none;
+    }
+
+    .AD-topbar a:hover {
+        
+    }
+
+    .AD-topbar a:active,
+    .AD-topbar a:visited {
+        
+    }
+
+    .AD-topbar-itemGroup {
+        flex-direction: column;
         list-style-type: none;
         display: none;
     }
 
-    .nav-links,
-    .logo {
-        text-decoration: none;
-        color: rgba(2, 2, 2, 0.7);
-        margin: 0 auto;
-        position: relative;
-        top: 10px;
+    .AD-topbar-main {
+        display: flex;
+        align-items: center;
+        padding: 16px;
     }
 
-    .logo-text {
-        width: 0;
-        height: 0;
-        overflow: hidden;
+    .AD-topbar-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .AD-topbar-logoText {
         font-size: 18px;
         font-weight: 700;
         color: #2d2d2d;
+        padding-left: 8px;
     }
 
-    .main-nav li {
-        text-align: center;
-        margin: 15px auto;
-    }
-
-    .navbar-logos {
-        display: flex;
-    }
-
-    .navbar-toggle {
+    .AD-topbar-toggle {
         position: absolute;
-        left: 15px;
-        top: 8px;
+        top: 0; left: 0;
+        bottom: 0;
+        background: transparent; 
+        border: 0 none;
         cursor: pointer;
         color: rgba(5, 5, 5, 0.5);
         font-size: 24px;
     }
 
-    .active {
-        display: block;
+    .AD-topbar-item {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .AD-topbar-itemGroup.active {
+        display: flex;
     }
 
     @media screen and (min-width: 900px) {
-        .navbar {
+        .AD-topbar {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .AD-topbar-main {
+            position: absolute;
+            top: 0; left: 0;
+            bottom: 0;
+        }
+
+        .AD-topbar-itemGroup {
             display: flex;
-            justify-content: space-between;
-            padding-bottom: 0;
-            height: 70px;
+            flex-direction: row;
             align-items: center;
         }
 
-        .main-nav {
-            display: flex;
-            margin-right: auto;
-            padding-left: 0px;
+        .AD-topbar-item--console {
+            margin-left: 12px;
         }
 
-        .main-nav li {
-            margin: 0;
-        }
-
-        .nav-links {
-            margin-left: 30px;
-        }
-
-        .first-nav {
-            margin-left: 0px;
-        }
-
-        .logo {
-            margin-top: 0;
-            padding-left: 0;
-        }
-
-        .navbar-logos {
-            margin-right: auto
-        }
-
-        .navbar-toggle {
+        .AD-topbar-toggle {
             display: none;
         }
 
-        .logo:hover,
-        .nav-links:hover {
-            /*color: rgba(255, 255, 255, 1);*/
-        }
     }
 </style>
 
-<nav class="navbar">
-    <div class="navbar-logos">
-        <span class="navbar-toggle" id="js-navbar-toggle">
+<nav class="AD-topbar">
+    <div class="AD-topbar-main">
+        <button class="AD-topbar-toggle" id="AD-topbar-toggle">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="ShowMenu">
                 <use xlink:href="#spectrum-icon-18-ShowMenu"></use>
             </svg>
-        </span>
-        <a class="logo" href="/">
-            <svg class="logo-image" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20"
+        </button>
+        <a class="AD-topbar-logo" href="/">
+            <svg class="AD-topbar-logoIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20"
                 focusable="false">
-                <path fill="#FF0000"
-                    d="M15.1,0H24v20L15.1,0z M8.9,0H0v20L8.9,0z M12,7.4L17.6,20h-3.8l-1.6-4H8.1L12,7.4z">
+                <path fill="#FF0000" d="M15.1,0H24v20L15.1,0z M8.9,0H0v20L8.9,0z M12,7.4L17.6,20h-3.8l-1.6-4H8.1L12,7.4z">
                 </path>
             </svg>
-            <span class="logo-text">Adobe Developers</span></a>
+            <span class="AD-topbar-logoText">Adobe Developers</span>
+        </a>
     </div>
-    <ul class="main-nav" id="js-menu">
+    <ul class="AD-topbar-itemGroup" id="AD-topbar-itemGroup">
         <li>
-            <a href="#" class="nav-links first-nav">Authentication</a>
+            <a href="#" class="AD-topbar-item">Authentication</a>
         </li>
         <li>
-            <a href="#" class="nav-links">Open Source</a>
+            <a href="#" class="AD-topbar-item">Open Source</a>
         </li>
         <li>
-            <a href="#" class="nav-links">Blog</a>
+            <a href="#" class="AD-topbar-item">Blog</a>
         </li>
         <li>
-            <a href="#" class="nav-links spectrum-Button spectrum-Button--cta">Console</a>
+            <a href="#" class="AD-topbar-item AD-topbar-item--console spectrum-Button spectrum-Button--cta">Console</a>
         </li>
     </ul>
 </nav>
 
 <script type="text/javascript">
-    let topbarNav = document.getElementById('adobe-develop-topbar-nav');
-    let navBarToggle = document.getElementById('js-navbar-toggle');
-    navBarToggle.addEventListener('click', function () {
-        mainNav.classList.toggle('active');
+    let topbarItems = document.getElementById('AD-topbar-itemGroup');
+    let topbarToggle = document.getElementById('AD-topbar-toggle');
+    topbarToggle.addEventListener('click', function () {
+        topbarItems.classList.toggle('active');
     });
 </script>
