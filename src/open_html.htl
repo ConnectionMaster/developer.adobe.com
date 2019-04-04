@@ -1,99 +1,137 @@
+<link rel="stylesheet" href="/static/spectrum/spectrum-light.css" />
+<link rel="stylesheet" href="/static/spectrum/spectrum-dark.css" />
 <link rel="stylesheet" href="/static/pages/open/open.css" />
 
 <div class="page-container openPage">
-  <section class="openPage-hero">
-    <figure class="openPage-hero-activity"></figure>
+  <section class="spectrum--dark openPage-hero">
+    <figure class="openPage-hero-activity">
+      <img src="/pages/open/placeholder-activity.png" />
+    </figure>
     <section class="openPage-hero-content">
       <figure class="openPage-hero-content-ghLogo">
-        <img src="" alt="github logo" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="GitHub">
+          <use xlink:href="#spectrum-icon-24-GitHub"></use>
+        </svg>
       </figure>
-      <h1 class="openPage-hero-content-title">Open Source At Adobe</h1>
-      <p class="openPage-hero-content-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas. Aenean
-          id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
-          fermentum massa.</p>
+      <h1 class="spectrum-Heading1--quiet">Open Source At Adobe</h1>
+      <p class="openPage-hero-content-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet
+        finibus erat scelerisque egestas. Aenean
+        id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
+        fermentum massa.</p>
       <div class="openPage-hero-content-ctas">
-        <a href="#">CTA 1</a>
-        <a href="#">CTA 2</a>
+        <a href="#" class="spectrum-Button spectrum-Button--cta">Have a look now</a>
+        <a href="#" class="spectrum--light spectrum-Button">Tell me</a>
       </div>
     </section>
   </section>
   <section class="openPage-orientation">
-    <div class="openPage-featuredRepositories">
-      <h1>Featured</h1>
-      <ul>
-        <li>repo 1</li>
-        <li>repo 2</li>
-        <li>repo 3</li>
-        <li>repo 4</li>
-      </ul>
-    </div>
-    <div class="openPage-popularRepositories">
-      <h1>Popular</h1>
-      <ul>
-        <li>repo 1</li>
-        <li>repo 2</li>
-        <li>repo 3</li>
-        <li>repo 4</li>
-      </ul>
-    </div>
-    <div class="openPage-repositories-gettingStarted">
-      <h1>Getting started</h1>
-      <figure>
-        <img src="" alt="Getting started image" />
-      </figure>
-      <a href="#">CTA</a>
-    </div>
-    <a class="openPage-floatingDiscoverCTA" href="#">Discover how you can build on Adobe products –&gt;</a>
-    <div class="openPage-standards">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <div class="openPage-standards-itemGroup">
-        <div class="openPage-standars-item">XDM</div>
-        <div class="openPage-standars-item">Tiff</div>
-        <div class="openPage-standars-item">PDF</div>
-        <div class="openPage-standars-item">XMP</div>
+    <div class="spectrum-grid spectrum-grid--fixed openPage-orientation-grid">
+      <div class="openPage-featuredRepositories">
+        <h1 class="spectrum-Heading2--quiet">Featured</h1>
+        <ul>
+          <li>repo 1</li>
+          <li>repo 2</li>
+          <li>repo 3</li>
+          <li>repo 4</li>
+        </ul>
       </div>
-    </div>
-    <div class="openPage-testimonials">
-      <figure>
-        <img src="" />
-      </figure>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas. Aenean
-          id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
-          fermentum massa.</p>
+      <div class="openPage-popularRepositories">
+        <h1 class="spectrum-Heading2--quiet">Popular</h1>
+        <ul>
+          <li>repo 1</li>
+          <li>repo 2</li>
+          <li>repo 3</li>
+          <li>repo 4</li>
+        </ul>
+      </div>
+      <div class="openPage-gettingStarted">
+        <h1 class="spectrum-Heading2--quiet">Getting started</h1>
+        <figure class="placeholder">
+        </figure>
+        <a href="#" class="spectrum-Button spectrum-Button--cta">Do it mon</a>
+      </div>
+      <a class="openPage-floatingDiscoverCTA" href="#">Discover how you can build on Adobe products –&gt;</a>
+      <div class="openPage-standards spectrum-grid--nested">
+        <div class="openPage-standards-intro">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="openPage-standards-itemGroup">
+          <div class="openPage-standards-item">XDM</div>
+          <div class="openPage-standards-item">Tiff</div>
+          <div class="openPage-standards-item">PDF</div>
+          <div class="openPage-standards-item">XMP</div>
+        </div>
+      </div>
+      <div class="openPage-testimonials">
+        <figure class="openPage-testimonials-avatar">
+          <img src="https://www.placecage.com/g/128/128" />
+        </figure>
+        <div class="openPage-testimonials-quote">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas.
+            Aenean
+            id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
+            fermentum massa.</p>
+        </div>
+      </div>
     </div>
   </section>
   <section class="openPage-partners">
-    <img src="#" />
-    <img src="#" />
-    <img src="#" />
-    <img src="#" />
-    <img src="#" />
-    <img src="#" />
-    <img src="#" />
-    <img src="#" />
-    <img src="#" />
+    <div class="openPage-partners-grid spectrum-grid spectrum-grid--fixed">
+      <figure class="openPage-partnerItem openPage-partnerItem-1">
+        <img src="https://www.placecage.com/g/128/48" />
+      </figure>
+      <figure class="openPage-partnerItem openPage-partnerItem-2">
+        <img src="https://www.placecage.com/g/180/48" />
+      </figure>
+      <figure class="openPage-partnerItem openPage-partnerItem-3">
+        <img src="https://www.placecage.com/g/192/42" />
+      </figure>
+      <figure class="openPage-partnerItem openPage-partnerItem-4">
+        <img src="https://www.placecage.com/g/128/48" />
+      </figure>
+      <figure class="openPage-partnerItem openPage-partnerItem-5">
+        <img src="https://www.placecage.com/g/128/48" />
+      </figure>
+      <figure class="openPage-partnerItem openPage-partnerItem-6">
+        <img src="https://www.placecage.com/g/132/32" />
+      </figure>
+      <figure class="openPage-partnerItem openPage-partnerItem-7">
+        <img src="https://www.placecage.com/g/146/24" />
+      </figure>
+      <figure class="openPage-partnerItem openPage-partnerItem-8">
+        <img src="https://www.placecage.com/g/180/48" />
+      </figure>
+      <figure class="openPage-partnerItem openPage-partnerItem-9">
+        <img src="https://www.placecage.com/g/180/48" />
+      </figure>
+    </div>
   </section>
   <section class="openPage-blog">
-    <div class="openPage-blog-postAbstract">
-      <h1>Lorem ipsum dolor sit amet</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas. Aenean
+    <div class="openPage-blog-grid spectrum-grid spectrum-grid--fixed">
+      <div class="openPage-blog-postAbstract openPage-blog-heroPost">
+        <h1 class="spectrum-Heading2--quiet">Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas.
+          Aenean
           id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
           fermentum massa.</p>
-      <a href="#"></a>
-    </div>
-    <div class="openPage-blog-postAbstract">
-      <h1>Lorem ipsum dolor sit amet</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas. Aenean
+        <a href="#"></a>
+      </div>
+      <div class="openPage-blog-postAbstract openPage-blog-secondPost">
+        <h1 class="spectrum-Heading2--quiet">Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas.
+          Aenean
           id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
           fermentum massa.</p>
-      <a href="#"></a>
-    </div>
-    <div class="openPage-blog-postAbstract">
-      <h1>Lorem ipsum dolor sit amet</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas. Aenean
+        <a href="#"></a>
+      </div>
+      <div class="openPage-blog-postAbstract openPage-blog-thirdPost">
+        <h1 class="spectrum-Heading2--quiet">Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas.
+          Aenean
           id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
           fermentum massa.</p>
-      <a href="#"></a>
+        <a href="#"></a>
+      </div>
     </div>
   </section>
 </div>
