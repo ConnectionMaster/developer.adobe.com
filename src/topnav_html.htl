@@ -3,7 +3,6 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        align-items: center;
         background:#fff;
     }
 
@@ -11,24 +10,11 @@
         text-decoration: none;
     }
 
-    .AD-topbar a:hover {
-        
-    }
-
-    .AD-topbar a:active,
-    .AD-topbar a:visited {
-        
-    }
-
-    .AD-topbar-itemGroup {
-        flex-direction: column;
-        list-style-type: none;
-        display: none;
-    }
-
     .AD-topbar-main {
+        position: relative;
         display: flex;
         align-items: center;
+        justify-content: center;
         padding: 16px;
     }
 
@@ -51,17 +37,37 @@
         background: transparent; 
         border: 0 none;
         cursor: pointer;
-        color: rgba(5, 5, 5, 0.5);
-        font-size: 24px;
+        color: #2d2d2d;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .AD-topbar-itemGroup {
+        flex-direction: column;
+        list-style-type: none;
+        display: none;
+        margin: 0; padding: 0;
     }
 
     .AD-topbar-item {
-        font-size: 18px;
-        padding: 8px 12px;
+        border-top: 1px solid #f3f3f3;
+    }
+
+    .AD-topbar-itemLink {
+        display: block;
+        padding: 16px;
+        text-align: left;
+        color: #2d2d2d;
     }
 
     .AD-topbar-itemGroup.active {
         display: flex;
+    }
+
+    .AD-topbar-item--console {
+        padding: 16px;
+        text-align: center;
     }
 
     @media screen and (min-width: 900px) {
@@ -83,8 +89,9 @@
             align-items: center;
         }
 
-        .AD-topbar-item--console {
-            margin-left: 12px;
+        .AD-topbar-item {
+            border-top: 0 solid transparent;
+            font-size: 18px;
         }
 
         .AD-topbar-toggle {
@@ -111,17 +118,17 @@
         </a>
     </div>
     <ul class="AD-topbar-itemGroup" id="AD-topbar-itemGroup">
-        <li>
-            <a href="#" class="AD-topbar-item">Authentication</a>
+        <li class="AD-topbar-item">
+            <a href="#" class="AD-topbar-itemLink">Authentication</a>
         </li>
-        <li>
-            <a href="#" class="AD-topbar-item">Open Source</a>
+        <li class="AD-topbar-item">
+            <a href="#" class="AD-topbar-itemLink">Open Source</a>
         </li>
-        <li>
-            <a href="#" class="AD-topbar-item">Blog</a>
+        <li class="AD-topbar-item">
+            <a href="#" class="AD-topbar-itemLink">Blog</a>
         </li>
-        <li>
-            <a href="#" class="AD-topbar-item AD-topbar-item--console spectrum-Button spectrum-Button--cta">Console</a>
+        <li class="AD-topbar-item AD-topbar-item--console">
+            <a href="#" class="spectrum-Button spectrum-Button--cta">Console</a>
         </li>
     </ul>
 </nav>
