@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="/pages/home/home.css" />
+<link rel="stylesheet" href="/spectrum/spectrum-dark.css" />
+<link rel="stylesheet" href="/spectrum/spectrum-darkest.css" />
 
 <div class="container spectrum-grid-row">
 

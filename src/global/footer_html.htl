@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="/spectrum/spectrum-darkest.css" />
+<style>
+    #footer {
+        padding: 25px;
+        background-color: black;
+    }
+
+    #footer>svg#dark_logo {
+        max-width: 25px;
+        max-height: 25px;
+        margin-bottom: 10px;
+    }
+
+    #footer .spectrum-Accordion svg.spectrum-Icon {
+        width: 10px;
+        height: 12px;
+    }
+</style>
+
+<nav id="footer" class="spectrum--darkest">
+    <svg id="dark_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" focusable="false">
+        <path fill="#FF0000" d="M15.1,0H24v20L15.1,0z M8.9,0H0v20L8.9,0z M12,7.4L17.6,20h-3.8l-1.6-4H8.1L12,7.4z">
+        </path>
+    </svg>
+    <div class="spectrum-Accordion">
+        <div class="spectrum-Accordion-item">
+            <div class="spectrum-Accordion-itemHeader" tabindex="0">Products</div>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator"
+                focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+            </svg>
+            <div class="spectrum-Accordion-itemContent">Creative Cloud</div>
+            <div class="spectrum-Accordion-itemContent">Experience Cloud</div>
+            <div class="spectrum-Accordion-itemContent">Document Cloud</div>
+            <div class="spectrum-Accordion-itemContent">Elements 2019 Family</div>
+            <div class="spectrum-Accordion-itemContent">Special Offers</div>
+            <div class="spectrum-Accordion-itemContent">View All Products</div>
+        </div>
+        <div class="spectrum-Accordion-item">
+            <div class="spectrum-Accordion-itemHeader">Blogs &amp; Community</div>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator"
+                focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+            </svg>
+            <div class="spectrum-Accordion-itemContent">Adobe Blog</div>
+            <div class="spectrum-Accordion-itemContent">Adobe I/O</div>
+            <div class="spectrum-Accordion-itemContent">Create Magazine</div>
+            <div class="spectrum-Accordion-itemContent">Behance</div>
+            <div class="spectrum-Accordion-itemContent">99U</div>
+            <div class="spectrum-Accordion-itemContent">CMO.com</div>
+            <div class="spectrum-Accordion-itemContent">View All</div>
+        </div>
+        <div class="spectrum-Accordion-item">
+            <div class="spectrum-Accordion-itemHeader" tabindex="0">Support</div>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator"
+                focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+            </svg>
+            <div class="spectrum-Accordion-itemContent">Help Center</div>
+            <div class="spectrum-Accordion-itemContent">Community forums</div>
+            <div class="spectrum-Accordion-itemContent">Contact Adobe</div>
+            <div class="spectrum-Accordion-itemContent">Enterprise Support</div>
+            <div class="spectrum-Accordion-itemContent">Download &amp; install</div>
+        </div>
+        <div class="spectrum-Accordion-item">
+            <div class="spectrum-Accordion-itemHeader" tabindex="0">Adobe</div>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator"
+                focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+            </svg>
+            <div class="spectrum-Accordion-itemContent">Adobe</div>
+            <div class="spectrum-Accordion-itemContent">Newsroom</div>
+            <div class="spectrum-Accordion-itemContent">Corporate Responsibility</div>
+            <div class="spectrum-Accordion-itemContent">Investor Relations</div>
+            <div class="spectrum-Accordion-itemContent">Supply Chain</div>
+            <div class="spectrum-Accordion-itemContent">Trust Center</div>
+            <div class="spectrum-Accordion-itemContent">Events</div>
+            <div class="spectrum-Accordion-itemContent">Careers</div>
+            <div class="spectrum-Accordion-itemContent">Diversity &amp; inclusion</div>
+        </div>
+    </div>
+</nav>
+
+<script type="text/javascript">
+    document.querySelectorAll('#footer .spectrum-Accordion-itemHeader').forEach(function (header) {
+        header.addEventListener('click', function (evt) {
+            this.parentNode.classList.toggle('is-open');
+        });
+    });
+</script>

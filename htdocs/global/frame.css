@@ -11,3 +11,12 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  max-width: 100%;
+  vertical-align: top;
+}

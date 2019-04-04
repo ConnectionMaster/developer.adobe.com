@@ -1,0 +1,138 @@
+<style>
+    .navbar {
+        padding: 8px;
+        align-items: center;
+    }
+
+    .main-nav {
+        padding-left: 20px;
+        list-style-type: none;
+        display: none;
+    }
+
+    .nav-links,
+    .logo {
+        text-decoration: none;
+        color: rgba(2, 2, 2, 0.7);
+        margin: 0 auto;
+        position: relative;
+        top: 10px;
+    }
+
+    .logo-text {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        font-size: 18px;
+        font-weight: 700;
+        color: #2d2d2d;
+    }
+
+    .main-nav li {
+        text-align: center;
+        margin: 15px auto;
+    }
+
+    .navbar-logos {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        position: absolute;
+        left: 15px;
+        top: 8px;
+        cursor: pointer;
+        color: rgba(5, 5, 5, 0.5);
+        font-size: 24px;
+    }
+
+    .active {
+        display: block;
+    }
+
+    @media screen and (min-width: 900px) {
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0;
+            height: 70px;
+            align-items: center;
+        }
+
+        .main-nav {
+            display: flex;
+            margin-right: auto;
+            padding-left: 0px;
+        }
+
+        .main-nav li {
+            margin: 0;
+        }
+
+        .nav-links {
+            margin-left: 30px;
+        }
+
+        .first-nav {
+            margin-left: 0px;
+        }
+
+        .logo {
+            margin-top: 0;
+            padding-left: 0;
+        }
+
+        .navbar-logos {
+            margin-right: auto
+        }
+
+        .navbar-toggle {
+            display: none;
+        }
+
+        .logo:hover,
+        .nav-links:hover {
+            /*color: rgba(255, 255, 255, 1);*/
+        }
+    }
+</style>
+
+<nav class="navbar">
+    <div class="navbar-logos">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="ShowMenu">
+                <use xlink:href="#spectrum-icon-18-ShowMenu"></use>
+            </svg>
+        </span>
+        <a class="logo" href="/">
+            <svg class="logo-image" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20"
+                focusable="false">
+                <path fill="#FF0000"
+                    d="M15.1,0H24v20L15.1,0z M8.9,0H0v20L8.9,0z M12,7.4L17.6,20h-3.8l-1.6-4H8.1L12,7.4z">
+                </path>
+            </svg>
+            <span class="logo-text">Adobe Developers</span></a>
+    </div>
+    <ul class="main-nav" id="js-menu">
+        <li>
+            <a href="#" class="nav-links first-nav">Authentication</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links">Open Source</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links">Blog</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links spectrum-Button spectrum-Button--cta">Console</a>
+        </li>
+    </ul>
+</nav>
+
+<script type="text/javascript">
+    let topbarNav = document.getElementById('adobe-develop-topbar-nav');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+    navBarToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('active');
+    });
+</script>
