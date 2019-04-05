@@ -13,6 +13,7 @@
 -->
 <!DOCTYPE html>
 <html class="spectrum--large" lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/static/favicon.ico" />
@@ -32,16 +33,70 @@
 <body class="spectrum spectrum--light spectrum-Typography">
     <esi:include src="/global.topnav.html" />
     <esi:include src="${payload.dispatch.url}" />
-    <esi:include src="/global.footer.html"/>
+    <esi:include src="/global.footer.html" />
+    <script src="/global/intersection-observer.js" type="text/javascript"></script>
     <script type="text/javascript">
-        // TODO: icons should be inlined as part of helix build
-        window.loadIcons('/static/spectrum/icons/spectrum-css-icons.svg');
-        window.loadIcons('/static/spectrum/icons/spectrum-icons.svg');
-        var mq = window.matchMedia( "(min-width: 900px)" );
-        if (mq.matches) {
-            document.documentElement.classList.remove('spectrum--large');
-            document.documentElement.classList.add('spectrum--medium');
-        }
+        ;
+        (function (AD, undefined) {
+
+            // TODO: icons should be inlined as part of helix build
+            window.loadIcons('/static/spectrum/icons/spectrum-css-icons.svg');
+            window.loadIcons('/static/spectrum/icons/spectrum-icons.svg');
+
+            // Switch spectrum flavour at different viewports
+            const mq = window.matchMedia("(min-width: 900px)");
+            if (mq.matches) {
+                document.documentElement.classList.remove('spectrum--large');
+                document.documentElement.classList.add('spectrum--medium');
+            }
+
+            // LAZY LOAD IMAGES
+            // Mostly this code w/ a few tweaks:
+            // https://scotch.io/tutorials/lazy-loading-images-for-performance-using-intersection-observer
+
+            // TODO: break this out into a component, think it through at scale, and write some tests
+            // in the meantime, this should do the basic job.
+            const loadImage = (image) => {
+                const src = image.dataset.src;
+                // ignore any images for which there is no `data-src` attribute
+                if (src) {
+                    fetchImage(src).then(() => {
+                        image.src = src;
+                    })
+                }
+            }
+            const fetchImage = (url) => {
+                return new Promise((resolve, reject) => {
+                    const image = new Image();
+                    image.src = url;
+                    image.onload = resolve;
+                    image.onerror = reject;
+                });
+            }
+            const handleIntersection = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.intersectionRatio > 0) {
+                        loadImage(entry.target)
+                    }
+                })
+            }
+            const options = {
+                rootMargin: '0px 0px 200px 0px',
+                threshold: 0.05
+            };
+            const observer = new IntersectionObserver(handleIntersection, options);
+            // We are using a polyfill, so this IntersectionObserver should always work
+            // but better safe than sorry
+            if (observer) {
+                const images = document.querySelectorAll('img');
+                images.forEach(img => {
+                    observer.observe(img);
+                });
+            } else {
+                Array.from(images).forEach(image => loadImage(image));
+            }
+
+        }(window.AD = window.AD || {}));
     </script>
 </body>
 

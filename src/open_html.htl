@@ -78,31 +78,31 @@
   <section class="openPage-partners">
     <div class="openPage-partners-grid spectrum-grid spectrum-grid--fixed">
       <figure class="openPage-partnerItem openPage-partnerItem-1">
-        <img src="https://www.placecage.com/g/128/48" alt="partner logo 1"/>
+        <img width="128" height="48" src="https://www.placecage.com/g/2/2" data-src="https://www.placecage.com/g/128/48" alt="partner logo 1"/>
       </figure>
       <figure class="openPage-partnerItem openPage-partnerItem-2">
-        <img src="https://www.placecage.com/g/180/48" alt="partner logo 2" />
+        <img width="180" height="48" src="https://www.placecage.com/g/2/2" data-src="https://www.placecage.com/g/180/48" alt="partner logo 2" />
       </figure>
       <figure class="openPage-partnerItem openPage-partnerItem-3">
-        <img src="https://www.placecage.com/g/192/42" alt="partner logo 3" />
+        <img width="192" height="42" src="https://www.placecage.com/g/2/2" data-src="https://www.placecage.com/g/192/42" alt="partner logo 3" />
       </figure>
       <figure class="openPage-partnerItem openPage-partnerItem-4">
-        <img src="https://www.placecage.com/g/128/48" alt="partner logo 4" />
+        <img width="128" height="48" src="https://www.placecage.com/g/2/2" data-src="https://www.placecage.com/g/128/48" alt="partner logo 4" />
       </figure>
       <figure class="openPage-partnerItem openPage-partnerItem-5">
-        <img src="https://www.placecage.com/g/128/48" alt="partner logo 5" />
+        <img width="128" height="48" src="https://www.placecage.com/g/2/2" data-src="https://www.placecage.com/g/128/48" alt="partner logo 5" />
       </figure>
       <figure class="openPage-partnerItem openPage-partnerItem-6">
-        <img src="https://www.placecage.com/g/132/32" alt="partner logo 6" />
+        <img width="132" height="32" src="https://www.placecage.com/g/2/2" data-src="https://www.placecage.com/g/132/32" alt="partner logo 6" />
       </figure>
       <figure class="openPage-partnerItem openPage-partnerItem-7">
-        <img src="https://www.placecage.com/g/146/24" alt="partner logo 7" />
+        <img width="146" height="24" src="https://www.placecage.com/g/2/2" data-src="https://www.placecage.com/g/146/24" alt="partner logo 7" />
       </figure>
       <figure class="openPage-partnerItem openPage-partnerItem-8">
-        <img src="https://www.placecage.com/g/180/48" alt="partner logo 8" />
+        <img width="180" height="48" src="https://www.placecage.com/g/2/2" data-src="https://www.placecage.com/g/180/48" alt="partner logo 8" />
       </figure>
       <figure class="openPage-partnerItem openPage-partnerItem-9">
-        <img src="https://www.placecage.com/g/180/48" alt="partner logo 9" />
+        <img width="180" height="96" src="https://www.placecage.com/g/2/2" data-src="https://www.placecage.com/g/180/96" alt="partner logo 9" />
       </figure>
     </div>
   </section>
