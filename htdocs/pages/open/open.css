@@ -86,7 +86,6 @@
 
 .openPage-orientation {
     position: relative;
-    padding: 16px;
     background: #E6E6E6;
     justify-content: center;
 }
@@ -301,7 +300,6 @@
 
 .openPage-partners {
     background: #B6B6B6;
-    padding: 32px;
 }
 
 .openPage-partners-grid {
@@ -375,7 +373,6 @@
 
 .openPage-blog {
     background: #E6E6E6;
-    padding: 32px;
 }
 
 .openPage-blog-postAbstract {
