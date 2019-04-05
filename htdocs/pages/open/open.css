@@ -2,9 +2,7 @@
  PAGE BASELINES
  ************************************************/
 
-.openPage {
-    margin-top: 32px;
-}
+.openPage { }
 
 @media screen and (min-width: 768px) {
     .openPage {
@@ -29,9 +27,12 @@
 
 .openPage-hero {
     max-width: 1280px;
-    margin: 32px auto;
-    position: relative;
-    overflow: hidden;
+    margin: 0;
+    
+}
+
+.openPage-heroContainer {
+    display: flex;
 }
 
 .openPage-hero-activity {
@@ -48,7 +49,14 @@
 }
 
 @media screen and (min-width: 768px) {
+
     .openPage-hero {
+        margin: 32px auto;
+        padding: 16px;
+    padding: var(--spectrum-grid-outer-padding);
+    }
+
+    .openPage-heroContainer {
         display: flex;
         overflow: visible;
         align-items: center;
@@ -98,12 +106,6 @@
     left: 0;
     right: 0;
     height: 200px;
-}
-
-@media screen and (min-width: 768px) {
-    .openPage-orientation {
-        padding: 32px;
-    }
 }
 
 .openPage-orientation-grid {}

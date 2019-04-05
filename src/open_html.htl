@@ -3,26 +3,28 @@
 <link rel="stylesheet" href="/static/pages/open/open.css" />
 
 <div class="page-container openPage">
-  <section class="spectrum--dark openPage-hero">
-    <figure class="openPage-hero-activity">
-      <img src="/pages/open/placeholder-activity.png" alt="Adobe open source activity on Github" />
-    </figure>
-    <section class="openPage-hero-content">
-      <figure class="openPage-hero-content-ghLogo">
-        <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="GitHub">
-          <use xlink:href="#spectrum-icon-24-GitHub"></use>
-        </svg>
+  <section class="openPage-hero">
+    <div class="openPage-heroContainer spectrum--dark">
+      <figure class="openPage-hero-activity">
+        <img src="/pages/open/placeholder-activity.png" alt="Adobe open source activity on Github" />
       </figure>
-      <h1 class="spectrum-Heading1--quiet">Open Source At Adobe</h1>
-      <p class="openPage-hero-content-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet
-        finibus erat scelerisque egestas. Aenean
-        id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
-        fermentum massa.</p>
-      <div class="openPage-hero-content-ctas">
-        <a href="#" class="spectrum-Button spectrum-Button--cta">Have a look now</a>
-        <a href="#" class="spectrum-Button spectrum-Button--overBackground">Tell me</a>
-      </div>
-    </section>
+      <section class="openPage-hero-content">
+        <figure class="openPage-hero-content-ghLogo">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="GitHub">
+            <use xlink:href="#spectrum-icon-24-GitHub"></use>
+          </svg>
+        </figure>
+        <h1 class="spectrum-Heading1--quiet">Open Source At Adobe</h1>
+        <p class="openPage-hero-content-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet
+          finibus erat scelerisque egestas. Aenean
+          id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
+          fermentum massa.</p>
+        <div class="openPage-hero-content-ctas">
+          <a href="#" class="spectrum-Button spectrum-Button--cta">Have a look now</a>
+          <a href="#" class="spectrum-Button spectrum-Button--overBackground">Tell me</a>
+        </div>
+      </section>
+    </div>
   </section>
   <section class="openPage-orientation">
     <div class="spectrum-grid spectrum-grid--fixed openPage-orientation-grid">
