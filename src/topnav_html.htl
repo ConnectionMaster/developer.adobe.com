@@ -1,9 +1,12 @@
 <style>
     .AD-topbar {
         position: relative;
+        position: sticky;
+        top: 0;
         display: flex;
         flex-direction: column;
         background:#fff;
+        z-index: 100;
     }
 
     .AD-topbar a {
@@ -55,24 +58,26 @@
     }
 
     @supports (transform-origin: 0px) {
-        .AD-topbar-main {
-            background: #fff;
-            z-index: 3;
-        }
-        .AD-topbar-itemGroup {
-            position: absolute;
-            top: 100%;
-            width: 100%;
-            display: flex;
-            background: #fff;
-            z-index: 2;
-            transform: translateY(-100%);
-            transition-property: transform;
-            transition-timing-function: cubic-bezier(0.45, 0, 0.40, 1);
-            transition-duration: 300ms;
-        }
-        .AD-topbar-itemGroup.active {
-            transform: translateY(0%);
+        @media screen and (max-width: 899px) {
+            .AD-topbar-main {
+                background: #fff;
+                z-index: 3;
+            }
+            .AD-topbar-itemGroup {
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                display: flex;
+                background: #fff;
+                z-index: 2;
+                transform: translateY(-100%);
+                transition-property: transform;
+                transition-timing-function: cubic-bezier(0.45, 0, 0.40, 1);
+                transition-duration: 300ms;
+            }
+            .AD-topbar-itemGroup.active {
+                transform: translateY(0%);
+            }
         }
     }
 
@@ -109,7 +114,6 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            transform: translateX(0%);
         }
 
         .AD-topbar-item {
