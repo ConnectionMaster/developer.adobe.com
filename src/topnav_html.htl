@@ -126,7 +126,7 @@
 
 <nav class="AD-topbar">
     <div class="AD-topbar-main">
-        <button class="AD-topbar-toggle" id="AD-topbar-toggle">
+        <button class="AD-topbar-toggle" id="AD-topbar-toggle" aria-label="Show Menu">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="ShowMenu">
                 <use xlink:href="#spectrum-icon-18-ShowMenu"></use>
             </svg>
