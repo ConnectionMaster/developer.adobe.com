@@ -6,7 +6,7 @@
     margin-top: 32px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .openPage {
         margin-top: 64px;
     }
@@ -47,7 +47,7 @@
     padding: 16px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .openPage-hero {
         display: flex;
         overflow: visible;
@@ -101,7 +101,7 @@
     height: 200px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .openPage-orientation {
         padding: 32px;
     }
@@ -119,7 +119,7 @@
     background: #fff;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
     .openPage-featuredRepositories,
     .openPage-popularRepositories,
@@ -135,7 +135,7 @@
     grid-column: 1/7;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .openPage-featuredRepositories {
         grid-column: 1/5;
     }
@@ -147,7 +147,7 @@
     grid-column: 7/13;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .openPage-popularRepositories {
         grid-column: 5/9;
     }
@@ -165,7 +165,7 @@
     margin-bottom: 16px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .openPage-gettingStarted {
         margin-top: initial;
         grid-column: 9/13;
@@ -180,7 +180,7 @@
     text-align: center;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .openPage-floatingDiscoverCTA {
         text-align: right;
     }
@@ -218,7 +218,7 @@
     text-align: center;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
     .openPage-standards-intro {
         text-align: left;
@@ -243,7 +243,7 @@
     text-align: center;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .openPage-testimonials {
         grid-column: 1/13;
         justify-content: center;
@@ -274,7 +274,7 @@
     line-height: 0;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .openPage-testimonials:after {
         top: auto;
         bottom: 16px;
