@@ -145,7 +145,7 @@ async function computeNavPath(apiRoot, owner, repo, ref, isDev, logger, mountPoi
       if (!summaryPath) {
         if (validMd.includes(file)) {
           // Strip .md extension
-          summaryPath = `${mountPoint}/${item.path.substring(0, item.path.indexOf('.md'))}`;
+          summaryPath = `${mountPoint}/${file.substring(0, file.indexOf('.md'))}`;
           return false;
         }
       }
