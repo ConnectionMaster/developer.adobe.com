@@ -137,7 +137,7 @@ async function computeNavPath(apiRoot, owner, repo, ref, isDev, logger, mountPoi
   // iterate over each file and search for SUMMARY.md or TOC.md
   try {
     logger.debug(`docs_html.pre.js - Fetching... ${options.uri}`);
-    const json = await request(options);
+    const json = await request.get(options);
 
     json.tree.every((item) => {
       const pathArray = item.path.split('/');
