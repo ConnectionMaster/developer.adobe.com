@@ -40,7 +40,7 @@ describe('docs_html.pre.js', () => {
   afterEach(() => {
     request.get.restore();
   });
-  it('should return /contributor/docs/help/TOC', async () => {
+  it('should return /contributor/docs/TOC', async () => {
     const file = await computeNav.computeNavPath(
       apiRoot,
       owner,
@@ -51,5 +51,17 @@ describe('docs_html.pre.js', () => {
       mountPoint,
     );
     assert.equal(file, '/contributor/docs/TOC');
+  });
+  it('should not return a path with help in the suburl', async () => {
+    const file = await computeNav.computeNavPath(
+      apiRoot,
+      owner,
+      repo,
+      ref,
+      isDev,
+      logger,
+      mountPoint,
+    );
+    assert.notEqual(file, '/contributor/docs/help/TOC');
   });
 });
