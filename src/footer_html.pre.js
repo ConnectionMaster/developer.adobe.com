@@ -16,9 +16,8 @@
 // that returns a function (with payload, config, logger as arguments)
 // that calls next (after modifying the payload a bit)
 async function pre(payload) {
-    console.log('open pre.js');
-    return payload;
+  console.log('open pre.js');
+  return payload;
 }
-  
+
 module.exports.pre = pre;
-  

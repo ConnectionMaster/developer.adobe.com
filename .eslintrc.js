@@ -13,7 +13,8 @@
 module.exports = {
   'env': {
     'node': true,
-    'es6': true
+    'es6': true,
+    "browser": true
   },
   // this is the root project for all sub modules. stop searching for any
   // eslintrc files in parent directories.
