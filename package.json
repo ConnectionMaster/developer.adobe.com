@@ -47,6 +47,8 @@
     "@wdio/mocha-framework": "5.8.1",
     "@wdio/sauce-service": "5.8.1",
     "@wdio/spec-reporter": "5.8.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "chromedriver": "^74.0.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",

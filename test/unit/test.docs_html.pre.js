@@ -22,7 +22,7 @@ const isDev = false;
 const logger = console;
 const mountPoint = '/contributor/docs';
 
-const response = {
+const responsePass = {
   tree: [
     {
       path: 'contributing.md',
@@ -33,14 +33,23 @@ const response = {
   ],
 };
 
+const responseFail = {
+  tree: [
+    {
+      path: 'contributing.md',
+    },
+    {
+      path: 'readme.md',
+    },
+  ],
+};
+
 describe('docs_html.pre.js', () => {
-  beforeEach(() => {
-    sinon.stub(request, 'get').returns(response);
-  });
   afterEach(() => {
     request.get.restore();
   });
   it('should return /contributor/docs/TOC', async () => {
+    sinon.stub(request, 'get').returns(responsePass);
     const file = await computeNav.computeNavPath(
       apiRoot,
       owner,
@@ -52,7 +61,8 @@ describe('docs_html.pre.js', () => {
     );
     assert.equal(file, '/contributor/docs/TOC');
   });
-  it('should not return a path with help in the suburl', async () => {
+  it('should not return a path with TOC.md in the url', async () => {
+    sinon.stub(request, 'get').returns(responseFail);
     const file = await computeNav.computeNavPath(
       apiRoot,
       owner,
@@ -62,6 +72,6 @@ describe('docs_html.pre.js', () => {
       logger,
       mountPoint,
     );
-    assert.notEqual(file, '/contributor/docs/help/TOC');
+    assert.notEqual(file, '/contributor/docs/TOC');
   });
 });
