@@ -1,13 +1,14 @@
-<div id="techblog" class="section index4 odd has-heading nb-heading-1 is-heading-only spectrum-grid-col-sm-12 spectrum-grid-col-md-6" data-sly-test="${content.mediumArticles}">
-  <h2 class="spectrum-Heading2">Recent Blog Articles</h2>
-  <hr class="spectrum-Rule spectrum-Rule--medium">
-  <div id="techblog-article-container" data-sly-list="${content.mediumArticles}">
-    <div>
+<div class="homePage-blog" data-sly-test="${content.mediumArticles}">
+  <div class="homePage-blog-header">
+    <h2 class="spectrum-Heading2">Recent Blog Articles</h2>
+    <hr class="spectrum-Rule spectrum-Rule--medium">
+  </div>
+  <div class="homePage-blog-articleList" data-sly-list="${content.mediumArticles}">
+    <div class="homePage-blog-articleSummary">
       <code class="spectrum-Code5">${item.pubDate} · ${item.minuteLength} min read · <strong>${item.creator}</strong></code>
       <h4 class="spectrum-Heading4">${item.title}</h4>
       <p class="spectrum-Body4">${item.caption}</p>
       <a href="${item.link}" class="spectrum-Button spectrum-Button--primary" style="margin: 20px 0;">Read On</a>
-      <hr class="spectrum-Rule spectrum-Rule--medium">
     </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/static/spectrum/spectrum-light.css" />
 <link rel="stylesheet" href="/static/spectrum/spectrum-dark.css" />
+<link rel="stylesheet" href="/static/spectrum/spectrum-css-grid.css" />
 <link rel="stylesheet" href="/static/pages/open/open.css" />
 
 <div class="page-container openPage">

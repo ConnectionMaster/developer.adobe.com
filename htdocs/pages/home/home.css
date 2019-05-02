@@ -1,3 +1,244 @@
-.homepage {
-    
+.homePage {
+    padding: 0;
+}
+
+.homePage-productLogo {
+    width: 64px;
+}
+
+/******************************************************
+First Section
+******************************************************/
+
+.homePage-firstSection {
+    padding: 0;
+}
+
+/* Search Block */
+
+.homePage-search {
+    grid-column: 1/13;
+    padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .homePage-search {
+        grid-column: 1/7;
+        padding: 48px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .homePage-search {
+        padding: 112px;
+    }
+}
+
+/* XD Promo */
+
+.homePage-xd {
+    grid-column: 1/13;
+    padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .homePage-xd {
+        grid-column: 7/13;
+        padding: 48px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .homePage-xd {
+        padding: 112px;
+    }
+}
+
+/******************************************************
+Second Section
+******************************************************/
+
+.homePage-secondSection {
+    background: rgb(25, 25, 25);
+}
+
+.homePage-secondSection-grid {
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .homePage-secondSection {
+        margin-top: -32px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .homePage-secondSection {
+        margin-top: -64px;
+    }
+}
+
+/* Authentication */
+
+.homePage-authentication {
+    grid-column: 1/13;
+    background: none;
+    padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .homePage-authentication {
+        grid-column: 1/6;
+        padding: 48px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .homePage-authentication {
+        padding: 112px;
+    }
+}
+
+/* XD Promo */
+
+.homePage-productSpotlight {
+    grid-column: 1/13;
+    padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .homePage-productSpotlight {
+        grid-column: 6/13;
+        margin: 64px 0 64px;
+        padding: 64px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .homePage-productSpotlight {
+        margin: 128px 0 64px;
+        padding-left: 220px;
+    }
+}
+
+
+/******************************************************
+Third Section
+******************************************************/
+
+.homePage-thirdSection {
+    background: rgb(225,225,225);
+}
+
+.homePage-thirdSection-grid {
+    padding: 0;
+}
+
+/* Blog */
+
+.homePage-blog {
+    grid-column:1/13;
+    padding: 16px;
+}
+
+.homePage-blog-header {
+}
+
+.homePage-blog-articleList {
+}
+
+.homePage-blog-articleSummary {
+    grid-column-end: span 12;
+}
+
+
+@media screen and (min-width: 768px) {
+    .homePage-blog {
+        padding: 48px;
+        grid-column:1/8;
+    }
+    .homePage-blog-articleSummary {
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .homePage-blog {
+        padding: 64px 112px;
+    }
+}
+
+/* Repos */
+
+.homePage-topRepos {
+    grid-column:1/13;
+}
+
+.homePage-topRepos-content {
+    padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .homePage-topRepos {
+        position: relative;
+        grid-column: 8/13;
+        margin: 32px 0 32px -16px;
+    }
+    .homePage-topRepos-content {
+        position: relative;
+        z-index: 1;
+        padding: 32px;
+    }
+    .homePage-topRepos-shadows {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .homePage-topRepos-shadows::before {
+        content: "";
+        display: block;
+        width: 103%;
+        height: 103%;
+        background: rgba(25,25,25,.2);
+        position: absolute; top: -1.5%; left: -1.5%;
+        transform: rotate(4deg);
+    }
+    .homePage-topRepos-shadows::after {
+        content: "";
+        display: block;
+        width: 103%;
+        height: 103%;
+        background: rgba(25,25,25,.2);
+        position: absolute; top: -1.5%; left: -1.5%;
+        transform: rotate(-1deg);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .homePage-topRepos {
+        margin: 64px 0 64px -16px;
+    }
+    .homePage-topRepos-content {
+        padding: 64px;
+    }
+}
+
+/* Newsletter */
+
+.homePage-newsletterSignup {
+    grid-column: 1/13;
+    padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .homePage-newsletterSignup {
+        padding: 24px 48px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .homePage-newsletterSignup {
+        padding: 48px 112px;
+    }
 }
