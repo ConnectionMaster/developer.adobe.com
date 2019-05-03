@@ -12,12 +12,12 @@
 */
 -->
 <nav data-sly-test="${payload.content.nav}">
-  <ul class="spectrum-SideNav spectrum-SideNav--multilevel" data-sly-list="${payload.content.nav}">
+  <div data-sly-list="${payload.content.nav}">
     ${item.outerHTML}
-  </ul>
+  </div>
 </nav>
 <script type="text/javascript">
 var pathname = window.location.pathname;
 var activeMenuItem = document.querySelector("a[href='" + pathname + "']");
-if (activeMenuItem) activeMenuItem.classList.add('is-selected');
+if (activeMenuItem) activeMenuItem.parentElement.classList.add('is-selected');
 </script>

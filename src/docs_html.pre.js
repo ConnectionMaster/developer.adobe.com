@@ -186,8 +186,6 @@ function createTOC(content, maxDepth, logger) {
     const level = heading.tagName;
     const title = heading.textContent;
     const id = `${index}_${encodeURIComponent(title)}`;
-    // We are using spectrum sidenav component. Adding our own padding to h3 elements
-    // padding is 24px as per spectrum-css mutli nav standards
     toc.push(`<li class="level-${level} spectrum-SideNav-item"><a href="#${id}" class="spectrum-SideNav-itemLink">${title}</a></li>`);
     heading.setAttribute('id', id);
   });

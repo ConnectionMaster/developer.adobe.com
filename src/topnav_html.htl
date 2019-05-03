@@ -149,7 +149,7 @@
             <a href="#" class="AD-topbar-itemLink">Authentication</a>
         </li>
         <li class="AD-topbar-item">
-            <a href="#" class="AD-topbar-itemLink">Open Source</a>
+            <a href="/open.html" class="AD-topbar-itemLink">Open Source</a>
         </li>
         <li class="AD-topbar-item">
             <a href="#" class="AD-topbar-itemLink">Blog</a>

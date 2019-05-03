@@ -41,9 +41,7 @@ function buildSideNavFromList(list) {
           html += anchorItem(paOrUl);
         }
       } else if (paOrUl.tagName === 'UL') {
-        // Every time we recurse to generate a sublist sidenav, we pad the left
-        // side of the sidenav with 12 pixels, to create the indent.
-        html += '<ul class="spectrum-SideNav" style="padding-left:12px;">';
+        html += '<ul class="spectrum-SideNav">';
         html += buildSideNavFromList(paOrUl);
         html += '</ul></li>';
       } else {
@@ -72,7 +70,7 @@ function filterNav(document, path, logger, mountPoint) {
     DOMUtil.replaceLinks(document.body, mountPoint);
     DOMUtil.spectrumify(document.body);
     let nav = Array.from(document.body.children);
-
+    
     // remove first title
     if (nav && nav.length > 0) {
       nav = nav.slice(1);
@@ -91,8 +89,8 @@ function filterNav(document, path, logger, mountPoint) {
         final += buildSideNavFromList(el);
       }
     });
-    final = `<div>${final}</div>`;
-    document.body.children.outerHTML = final;
+    final = `<ul class="spectrum-SideNav spectrum-SideNav--multiLevel">${final}</ul>`;
+    document.body.innerHTML = final;
     // console.log(Array.from(document.body.children[0].children)[0].innerHTML);
 
     logger.debug(`summary_html.pre.js - Managed to collect some content for the nav: ${nav.length}`);
@@ -109,7 +107,7 @@ async function pre(context, action) {
   } = action;
 
   logger.debug(`summary_html.pre.js - Requested path: ${action.request.params.path}`);
-
+  
   try {
     if (!context.content) {
       logger.debug('summary_html.pre.js - context has no resource, nothing we can do');
@@ -117,7 +115,7 @@ async function pre(context, action) {
     }
 
     const p = context;
-
+    
     // clean up the resource
     p.content.nav = filterNav(p.content.document,
       action.request.params.path,
