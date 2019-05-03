@@ -19,5 +19,5 @@
 <script type="text/javascript">
 var pathname = window.location.pathname;
 var activeMenuItem = document.querySelector("a[href='" + pathname + "']");
-if (activeMenuItem) activeMenuItem.parentNode.classList.add('is-selected');
+if (activeMenuItem) activeMenuItem.classList.add('is-selected');
 </script>
