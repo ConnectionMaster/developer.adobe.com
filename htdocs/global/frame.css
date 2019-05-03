@@ -20,3 +20,17 @@ figure img {
   max-width: 100%;
   vertical-align: top;
 }
+
+img {
+  max-width: 100%;
+}
+
+/*
+ * Prevent browser from using system font etc. there
+ */
+ input,
+ select,
+ textarea,
+ button {
+     font: inherit;
+ }

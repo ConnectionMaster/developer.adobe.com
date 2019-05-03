@@ -10,15 +10,6 @@
 * governing permissions and limitations under the License.
 */
 
-html,
-body {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .content.collapsed {
     display: none;
 }
@@ -27,32 +18,9 @@ body {
     margin: 2cm 1cm;
 }
 
-/*
- * Prevent browser from using system font etc. there
- */
-input,
-select,
-textarea,
-button {
-    font: inherit;
-}
-
-h2:before {
-    content: " ";
-    position: absolute;
-    top: -32px;
-    left: 0px;
-    height: 1px;
-    width: 100%;
-}
-
-img {
-    max-width: 500px;
-}
-
-/*
- * HEADER
- */
+/******************************************************
+Header
+******************************************************/
 
 header {
     -webkit-box-align: stretch;
@@ -98,166 +66,7 @@ header .main .search {
     transition: -ms-flex 0.2s, -webkit-flex 0.2s, flex 0.2s, width 0.2s;
 }
 
-
-/*
- * END OF HEADER
- */
-
-
-.main {
-    flex: 1;
-    display: flex;
-    align-items: stretch;
-    transition: margin-bottom ease 200ms;
-}
-
-/**
- * NAV
- */
-
-.nav {
-    flex: 0 0 auto;
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    width: calc((100% - 1448px) / 2 + 298px);
-    min-width: 298px;
-    padding-left: calc((100% - 1448px) / 2);
-    border-right: 1px solid #e8eaed;
-    margin-top: 32px;
-}
-
- /**
- * CONTENT
- */
-
-.content {
-    flex: 1 1 auto;
-    min-width: 0px;
-    display: flex;
-    position: relative;
-}
-
-.content-body {
-    display: block;
-    padding: 0px;
-    flex: 1 1 auto;
-    min-width: 0px;
-    max-width: 100%;
-    margin: 10px 20px;
-    line-height: 1.5em;
-}
-
-.content-body .title-bar {
-    -webkit-box-align: stretch;
-    -webkit-box-pack: justify;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    align-items: stretch;
-}
-
-.content-body .title {
-    display: block;
-    margin: 0px;
-    flex: 1 1 auto;
-    border-bottom: 1px solid #E6ECF1;
-    padding-bottom: 32px;
-}
-
-.content-body .title .author {
-    display: block;
-    margin: 0px;
-    border-left: 2px solid rgb(236, 33, 0);
-    padding: 0 16px;
-}
-
-.content-body .title .commits {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex: auto;
-    align-items: center;
-    margin-top: 8px;
-}
-
-.content-body .title .commits .committers {
-    display: block;
-    margin: 0px;
-    padding: 0px;
-    flex: 0 0 auto;
-    margin-right: 8px;
-}
-
-/* TODO: probably need to tweak this to work well with spectrum*/
-.content-body .title .author .commits {
-    font-size: 12px;
-    line-height: 1.625;
-    font-weight: 400;
-}
-
-.content-body .title .author .commits img {
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 128px;
-    width: 30px;
-    height: 30px;
-    font-size: 12px;
-    line-height: 1.5;
-    font-weight: 500;
-    z-index: 0;
-    box-shadow: 0 0 0 2px #fff;
-}
-
-.content-body .title .commits .lastModified {
-    display: none;
-    padding-left: 8px;
-    align-items: center;
-}
-
-.content-body .title .commits .lastModified.visible {
-    display: initial;
-}
-
-.content-body .edit-container {
-    flex:0 0 auto;
-    display:flex;
-    flex-direction:row;
-    padding:16px 0;
-    margin:0px -4px;
-}
-
-.toc {
-    flex: 1 1 auto;
-    width: 224px;
-    min-width: 224px;
-    display: flex;
-    position: relative;
-    padding: 40px 0;
-}
-
-.toc-body {
-    padding-left:24px;
-    border-left: 1px solid #e8eaed;
-}
-
-.toc-body ul {
-    padding-inline-start: 0;
-}
-
-.toc-body ul li {
-    margin-bottom: 8px;
-    display: flex;
-    list-style: none;
-}
-
-.level-H3 {
-    padding-left: 24px;
-}
-
-/**
- * END OF CONTENT
- */
+/* Search */
 
 .search {
     margin-top: 5px;
@@ -287,17 +96,199 @@ header .main .search {
     padding: 0px 8px;
 }
 
-.menu-icon {
-    display: inline-block;
-    width: 1.28571429em;
-    font-size: inherit;
-    line-height: 1;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(0, 0, 0)"><rect y="0" width="100%" height="20%" rx="5%" ry="5%" /><rect y="40%" width="100%" height="20%" rx="5%" ry="5%" /><rect y="80%" width="100%" height="20%" rx="5%" ry="5%" /></svg>') center / 80% 80% no-repeat;
-
+@media screen and (min-width: 1280px) {
+    .search {
+        display: inline-block;
+    }
 }
 
-.menu-icon:before {
-    content: "\000A0";
+/******************************************************
+Left Nav
+******************************************************/
+
+.docsPage-nav {
+    grid-column: 1/4;
+    flex: 0 0 auto;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.docsPage-nav ul ul {
+    padding: 0 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .docsPage-nav {
+        display: flex;
+    }
+}
+
+/******************************************************
+Content
+******************************************************/
+
+.docsPage-content {
+    grid-column: 4/10;
+    flex: 1 1 auto;
+    min-width: 0px;
+    display: flex;
+    position: relative;
+    background: white;
+    padding: 16px;
+    align-self: start;
+}
+
+@media screen and (min-width: 900px) {
+    .docsPage-content {
+        padding: 32px;
+    }
+}
+
+.docsPage-contentBody {
+    display: block;
+    
+    flex: 1 1 auto;
+    min-width: 0px;
+    max-width: 100%;
+    max-width: 80ch;
+    line-height: 1.5em;
+}
+
+.docsPage-contentBody .title-bar {
+    -webkit-box-align: stretch;
+    -webkit-box-pack: justify;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: stretch;
+}
+
+.docsPage-contentBody .title {
+    display: block;
+    margin: 0px;
+    flex: 1 1 auto;
+    border-bottom: 1px solid #E6ECF1;
+    padding-bottom: 32px;
+}
+
+.docsPage-contentBody .title .author {
+    display: block;
+    margin: 0px;
+    border-left: 2px solid rgb(236, 33, 0);
+    padding: 0 16px;
+}
+
+.docsPage-contentBody .title .commits {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex: auto;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.docsPage-contentBody .title .commits .committers {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    flex: 0 0 auto;
+    margin-right: 8px;
+}
+
+/* TODO: probably need to tweak this to work well with spectrum*/
+.docsPage-contentBody .title .author .commits {
+    font-size: 12px;
+    line-height: 1.625;
+    font-weight: 400;
+}
+
+.docsPage-contentBody .title .author .commits img {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 128px;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+    z-index: 0;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+.docsPage-contentBody .title .commits .lastModified {
+    display: none;
+    padding-left: 8px;
+    align-items: center;
+}
+
+.docsPage-contentBody .title .commits .lastModified.visible {
+    display: initial;
+}
+
+.docsPage-contentBody .edit-container {
+    flex:0 0 auto;
+    display:flex;
+    flex-direction:row;
+    padding:16px 0;
+    margin:0px -4px;
+}
+
+@media screen and (min-width: 900px) {
+    .docsPage-contentBody .edit-container {
+        -webkit-box-align: baseline;
+        -webkit-box-orient: horizontal;
+        align-items: baseline;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/******************************************************
+Table of Contents 
+******************************************************/
+
+.docsPage-toc {
+    grid-column: 10/13;
+}
+
+.docsPage-toc-body {
+    position: sticky;
+    top: 80px;
+    background: white;
+    padding: 16px;
+    width: 100%;
+}
+
+.docsPage-toc ul {
+    padding-inline-start: 0;
+}
+
+.docsPage-toc ul li {
+    margin-bottom: 8px;
+    display: flex;
+    list-style: none;
+}
+
+.level-H3 {
+    padding-left: 24px;
+}
+
+/******************************************************
+Typography
+******************************************************/
+
+/* 
+    offsets anchors for table of contents links
+    to account for fixed header
+ */
+.docsPage-contentBody h2::before {
+    content: " ";
+    position: relative;
+    display: block;
+    width: 0;
+    height: 100px;
+    margin-top: -100px;
 }
 
 table {
@@ -330,39 +321,4 @@ table tr:nth-child(2n) {
 table td {
     padding: 6px 13px;
     border: 1px solid #dfe2e5;
-}
-
-
-@media screen and (min-width: 900px) {
-    /* desktop decorations */
-
-    html,
-    body {
-        /* PERF: https://marco.org/2012/11/15/text-rendering-optimize-legibility */
-        text-rendering: optimizeLegibility;
-    }
-
-    .edit-container {
-        -webkit-box-align: baseline;
-        -webkit-box-orient: horizontal;
-        align-items: baseline;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .menu-icon {
-        display: none;
-    }
-
-    .search {
-        display: inline-block;
-    }
-
-    .nav {
-        display: flex;
-    }
-
-    .content-body {
-        margin: 30px 88px;
-    }
 }
