@@ -11,10 +11,7 @@
 version: 1
 definitions:
   defaults:
-    # Run default content from github repo
     - &defaultRepo https://github.com/adobe/developer.adobe.com.git#master
-    # Run default content from this repo locally
-    # - &defaultRepo "http://localhost/local/default.git"
   strains:
     base:
       &basestrain
@@ -50,6 +47,10 @@ strains:
     url: https://adobedevsite.helix-demo.xyz/starter/docs
     content: https://github.com/AdobeDocs/starter-docs.git#author
     directoryIndex: Overview.html
+    package: developer-adobe-com/88564b66195f1562ae41fbb395acf8ace49446db
+  - name: open-staging
+    <<: *basestrain
+    url: https://adobedevsite.helix-demo.xyz/open
     package: developer-adobe-com/88564b66195f1562ae41fbb395acf8ace49446db
   - name: static-staging
     <<: *basestrain

@@ -12,8 +12,9 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved
 
-async function pre(context) {
-  console.log('open pre.js');
+async function pre(context, action) {
+  const { logger } = action;
+  logger.info('open pre.js');
   return context;
 }
 

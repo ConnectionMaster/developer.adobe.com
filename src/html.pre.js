@@ -33,14 +33,16 @@ function pre(context, action) {
   logger.info(`action rootPath: ${action.request.params.rootPath}`);
   logger.info(`strain header: ${context.request.headers['x-strain']}`);
 
-  if (!action.request.params.rootPath && context.request.path.match('index.html')) {
+  if (context.request.path.match(/^\/open(\.html)?(\/index.html)?$/i)) {
+    // open page
+    context.dispatch.url = 'index.open.html';
+  } else if (action.request.params.rootPath.match('^/docs')) {
+    context.dispatch.url = context.request.path.replace(/\.html/, '.docs.html');
+  } else if (!action.request.params.rootPath && context.request.path.match('index.html')) {
     // home page
     context.dispatch.url = 'index.default.html';
-  } else if (action.request.params.rootPath.match('/docs')) {
-    context.dispatch.url = context.request.path.replace(/\.html/, '.docs.html');
-  } else if (!action.request.params.rootPath && context.request.path.match('open.html')) {
-    context.dispatch.url = context.request.path.replace(/\.html/, '.open.html');
   } else {
+    logger.warn('Using dispatcher catch-all!');
     // TODO: Create new template for marketing pages
     // use homepage for now
     context.dispatch.url = context.request.url.replace(/\.html/, '.default.html');
