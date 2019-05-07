@@ -29,7 +29,7 @@
                 </svg>
             </button>
         </form>
-        <label class="spectrum-ActionButton spectrum-ActionButton--quiet" for="docsPage-navToggle">
+        <label class="spectrum-ActionButton spectrum-ActionButton--quiet docsPage-navToggle-label" for="docsPage-navToggle">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-More" />
             </svg>
