@@ -120,15 +120,55 @@ Left Nav
 
 .docsPage-nav {
     flex: 0 0 auto;
-    display: none;
-    padding: 32px;
+    padding: 16px;
     background: #fff;
-    margin-right: 1px;
+    position: relative;
 }
 
 @media screen and (min-width: 768px) {
     .docsPage-nav {
-        display: block;
+        padding: 32px;
+        margin-right: 1px;
+    }
+    .docsPage-navToggle-label {
+        display: none;
+    }
+    .docsPage-navToggle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .docsPage {
+        flex-direction: column;
+    }
+    .docsPage-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .docsPage-search {
+        order: 3;
+    }
+    .docsPage-navToggle-label {
+        order: 1;
+    }
+    .docsPage-navToggle {
+        order: 2;
+        display: none;
+    }
+    .docsPage-navToggle:checked ~ .docsPage-navItems {
+        transform: translate(0,0);
+    }
+    .docsPage-navItems {
+        background: #fff;
+        transition: transform 130ms ease-out;
+        transform: translate(-310px,0);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 10;
+        box-shadow: 0 0 16px 0 rgba(116, 129, 141, 0.2);
     }
 }
 

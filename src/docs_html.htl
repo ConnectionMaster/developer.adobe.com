@@ -17,19 +17,19 @@
 
 <div class="docsPage">
     <div class="docsPage-nav" id="docs-summary">
-        <form action="https://www.google.com/search" method="GET" class="spectrum-Search">
-            <input type="search" placeholder="Search" name="q" value="" class="spectrum-Textfield spectrum-Search-input">
+        <form action="https://www.google.com/search" method="GET" class="docsPage-search spectrum-Search">
+            <input type="search" placeholder="Search docs" name="q" value="" class="spectrum-Textfield spectrum-Search-input">
             <input type="hidden" value="site:${request.headers.host}" name="q">
             <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Magnifier" />
             </svg>
             <button type="reset" class="spectrum-ClearButton">
                 <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-CrossSmall" />
+                    <use xlink:href="#spectrum-css-icon-CrossSmall" />
                 </svg>
             </button>
         </form>
-        <label class="spectrum-ActionButton spectrum-ActionButton--quiet docsPage-navToggle-label" for="docsPage-navToggle">
+        <label class="spectrum-ActionButton spectrum-ActionButton--quiet" for="docsPage-navToggle">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-More" />
             </svg>

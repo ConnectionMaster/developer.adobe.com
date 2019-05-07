@@ -11,7 +11,7 @@
 * governing permissions and limitations under the License.
 */
 -->
-<nav data-sly-test="${payload.content.nav}">
+<nav class="docsPage-navItems" data-sly-test="${payload.content.nav}">
   <div data-sly-list="${payload.content.nav}">
     ${item.outerHTML}
   </div>
