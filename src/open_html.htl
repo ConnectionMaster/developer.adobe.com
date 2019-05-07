@@ -6,7 +6,6 @@
   <section class="openPage-hero">
     <div class="openPage-heroContainer spectrum--dark">
       <figure class="openPage-hero-activity">
-        <!-- <img src="/pages/open/placeholder-activity.png" alt="Adobe open source activity on Github" /> -->
         <svg id="openPage-visualization" width="100%" height="100%" viewBox="0 0 590 525" version="1.1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -125,11 +124,8 @@
             <use xlink:href="#spectrum-icon-24-GitHub"></use>
           </svg>
         </figure>
-        <h1 class="spectrum-Heading1--quiet">Open Source At Adobe</h1>
-        <p class="openPage-hero-content-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet
-          finibus erat scelerisque egestas. Aenean
-          id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
-          fermentum massa.</p>
+        <h1 class="spectrum-Heading1--quiet">Adobe loves open source, relies on it and gives back.</h1>
+        <p class="openPage-hero-content-body">Come build in the open with us.</p>
         <div class="openPage-hero-content-ctas">
           <a href="#" class="spectrum-Button spectrum-Button--cta">Have a look now</a>
           <a href="#" class="spectrum-Button spectrum-Button--overBackground">Tell me</a>
@@ -140,33 +136,34 @@
   <section class="openPage-orientation">
     <div class="spectrum-grid spectrum-grid--fixed openPage-orientation-grid">
       <div class="openPage-featuredRepositories">
-        <h1 class="spectrum-Heading2--quiet">Featured</h1>
-        <ul>
-          <li>repo 1</li>
-          <li>repo 2</li>
-          <li>repo 3</li>
-          <li>repo 4</li>
-        </ul>
+        <div class="spectrum-Banner spectrum-Banner--info spectrum-Banner--corner">
+          <div class="spectrum-Banner-header">Our Featured Repo</div>
+          <div class="spectrum-Banner-content">Just updated to v2.10.0</div>
+        </div>
+        <div>
+          <h1 class="spectrum-Heading2--quiet">Spectrum CSS</h1>
+          <p>The standard CSS implementation of the Spectrum design language.</p>
+        </div>
+        <a href="https://github.com/adobe/spectrum-css" target="_blank" class="spectrum-Button">View it on Github</a>
       </div>
       <div class="openPage-popularRepositories">
-        <h1 class="spectrum-Heading2--quiet">Popular</h1>
+        <h1 class="spectrum-Heading2--quiet">Popular Repos</h1>
         <ul>
-          <li>repo 1</li>
-          <li>repo 2</li>
-          <li>repo 3</li>
-          <li>repo 4</li>
+          <li><a href="https://github.com/adobe/brackets" target="_blank">adobe/brackets</a>, 29.7k stars, 6.4k forks</li>
+          <li><a href="https://github.com/adobe/aem-core-wcm-components" target="_blank">adobe/aem-core-wcm-components</a>, 257 stars, 203 forks</li>
+          <li><a href="https://github.com/adobe/hyde" target="_blank">adobe/hyde</a>, 206 stars, 8 forks</li>
         </ul>
       </div>
       <div class="openPage-gettingStarted">
-        <h1 class="spectrum-Heading2--quiet">Getting started</h1>
-        <figure class="placeholder">
-        </figure>
-        <a href="#" class="spectrum-Button spectrum-Button--cta">Do it mon</a>
+        <div>
+          <h1 class="spectrum-Heading2--quiet">Getting started</h1>
+          <p>Adobe's open source projects are open to contributions! Explore what we're working on in our GitHub organization.</p>
+        </div>
+        <a href="https://github.com/adobe" target="_blank" class="spectrum-Button spectrum-Button--cta">Take a look</a>
       </div>
-      <a class="openPage-floatingDiscoverCTA" href="#">Discover how you can build on Adobe products –&gt;</a>
       <div class="openPage-standards spectrum-grid--nested">
         <div class="openPage-standards-intro">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>Adobe's standards like <a href="https://developer.adobe.com/open/standards/xmp.html" target="_blank">XMP</a>, <a>PDF</a>, <a href="https://developer.adobe.com/open/standards/xdm.html" target="_blank">XDM</a> and Adobe's contributions to open standards like SVG and OpenType ensure interoperability across platforms.</p>
         </div>
         <div class="openPage-standards-itemGroup">
           <div class="openPage-standards-item">XDM</div>
@@ -179,11 +176,11 @@
         <figure class="openPage-testimonials-avatar">
           <img src="https://www.placecage.com/g/128/128" alt="A happy user" />
         </figure>
-        <div class="openPage-testimonials-quote">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas.
-            Aenean
-            id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
-            fermentum massa.</p>
+        <blockquote class="openPage-testimonials-quote">
+          <p>I think open source is more about the culture of how you develop software rather than the license in which you release something. It’s mostly by collaboration, about transparency, about accepting pull requests and input from everybody not just from the people that work on your team.</p>
+          <footer class="openPage-testimonials-attribution">
+            David Nuescheler – <em>Fellow & VP, Developer Platform & Ecosystem</em>
+          </footer>
         </div>
       </div>
     </div>
