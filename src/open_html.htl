@@ -226,31 +226,6 @@
     </div>
   </section>
   <section class="openPage-blog">
-    <div class="openPage-blog-grid spectrum-grid spectrum-grid--fixed">
-      <div class="openPage-blog-postAbstract openPage-blog-heroPost">
-        <h1 class="spectrum-Heading2--quiet">Lorem ipsum dolor sit amet</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas.
-          Aenean
-          id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
-          fermentum massa.</p>
-        <a href="#">Read the post</a>
-      </div>
-      <div class="openPage-blog-postAbstract openPage-blog-secondPost">
-        <h1 class="spectrum-Heading2--quiet">Lorem ipsum dolor sit amet</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas.
-          Aenean
-          id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
-          fermentum massa.</p>
-        <a href="#">Read the post</a>
-      </div>
-      <div class="openPage-blog-postAbstract openPage-blog-thirdPost">
-        <h1 class="spectrum-Heading2--quiet">Lorem ipsum dolor sit amet</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet finibus erat scelerisque egestas.
-          Aenean
-          id eros gravida, condimentum urna convallis, egestas felis. In hac habitasse platea dictumst. Donec eget
-          fermentum massa.</p>
-        <a href="#">Read the post</a>
-      </div>
-    </div>
+    <esi:include src="/open.openFeed.html" />
   </section>
 </div>

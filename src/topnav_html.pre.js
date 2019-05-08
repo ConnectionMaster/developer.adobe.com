@@ -15,8 +15,9 @@
 // module.exports.pre is a function (taking next as an argument)
 // that returns a function (with payload, config, logger as arguments)
 // that calls next (after modifying the payload a bit)
-async function pre(payload) {
-  console.log('open pre.js');
+async function pre(payload, action) {
+  const { logger } = action;
+  logger.info('open pre.js');
   return payload;
 }
 

@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = {
+DOMUtil = {
   addClass(document, selector, classNames) {
     document.querySelectorAll(selector).forEach((element) => {
       classNames.split(' ').forEach(className => element.classList.add(className));
@@ -49,4 +49,21 @@ module.exports = {
       });
     }
   },
+  // Given a DOM node, recurse over its children and extract just text nodes
+  // Used for estimating read length
+  getAllWords(node) {
+    let allText = [];
+    node.childNodes.forEach((child) => {
+      if (child.nodeType === 3) {
+        // node is text node
+        allText = allText.concat(child.textContent.split(' '));
+      } else {
+        // node is an element, recurse
+        allText = allText.concat(DOMUtil.getAllWords(child));
+      }
+    });
+    return allText.filter(word => word.length && word.match(/^\w+\W?$/i));
+  }
 };
+
+module.exports = DOMUtil;

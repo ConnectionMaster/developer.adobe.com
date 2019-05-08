@@ -14,10 +14,9 @@
 const MediumUtil = require('./MediumUtil.js');
 
 async function pre(context, action) {
-  const { logger } = action;
   const { content } = context;
-  content.mediumArticles = await MediumUtil.getPostsAsHTML('https://medium.com/feed/adobetech');
-  logger.info(content.mediumArticles);
+  const { logger } = action;
+  content.mediumArticles = await MediumUtil.getPostsAsHTML('https://medium.com/feed/adobetech/tagged/open-source', 3);
   return context;
 }
 

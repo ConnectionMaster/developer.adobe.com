@@ -5,10 +5,10 @@
   </div>
   <div class="homePage-blog-articleList" data-sly-list="${content.mediumArticles}">
     <div class="homePage-blog-articleSummary">
-      <code class="spectrum-Code5">${item.pubDate} · ${item.minuteLength} min read · <strong>${item.creator}</strong></code>
+      <code class="spectrum-Code5">${item.pubDate} · ${item.readingLength} min read · <strong>${item.creator}</strong></code>
       <h4 class="spectrum-Heading4">${item.title}</h4>
       <p class="spectrum-Body4">${item.caption}</p>
-      <a href="${item.link}" class="spectrum-Button spectrum-Button--primary" style="margin: 20px 0;">Read On</a>
+      <a href="${item.link}" class="spectrum-Button spectrum-Button--primary">Read On</a>
     </div>
   </div>
 </div>

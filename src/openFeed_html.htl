@@ -1,0 +1,9 @@
+<div  class="openPage-blog-grid spectrum-grid spectrum-grid--fixed" 
+      data-sly-test="${content.mediumArticles}"
+      data-sly-list="${content.mediumArticles}">
+  <div class="openPage-blog-postAbstract">
+    <h1 class="spectrum-Heading2--quiet">${item.title}</h1>
+    <p class="spectrum-Body4">${item.caption}</p>
+    <a href="${item.link}" class="spectrum-Button spectrum-Button--primary">Read the post</a>
+  </div>
+</div>

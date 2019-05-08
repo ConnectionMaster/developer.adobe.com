@@ -28,7 +28,6 @@
 .openPage-hero {
     max-width: 1280px;
     margin: 0;
-
 }
 
 .openPage-heroContainer {
@@ -501,18 +500,18 @@
         overflow: hidden;
     }
 
-    .openPage-blog-heroPost {
+    .openPage-blog-postAbstract:first-child {
         grid-column: 1/13;
         grid-row: 1/18;
     }
 
-    .openPage-blog-secondPost {
+    .openPage-blog-postAbstract:nth-child(2) {
         grid-column: 4/8;
         grid-row: 16/24;
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
     }
 
-    .openPage-blog-thirdPost {
+    .openPage-blog-postAbstract:nth-child(3) {
         grid-column: 8/12;
         grid-row: 14/22;
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
