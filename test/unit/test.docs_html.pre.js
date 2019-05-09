@@ -49,7 +49,7 @@ describe('docs_html.pre.js', () => {
     afterEach(() => {
       request.get.restore();
     });
-    it('should return /contributor/docs/help/TOC', async () => {
+    it('should return /contributor/docs/TOC', async () => {
       sinon.stub(request, 'get').returns(responsePass);
       const file = await computeNav.computeNavPath(
         apiRoot,
@@ -60,7 +60,7 @@ describe('docs_html.pre.js', () => {
         logger,
         mountPoint,
       );
-      assert.equal(file, '/contributor/docs/help/TOC');
+      assert.equal(file, '/contributor/docs/TOC');
     });
     it('should not return a path with TOC.md in the url', async () => {
       sinon.stub(request, 'get').returns(responseFail);

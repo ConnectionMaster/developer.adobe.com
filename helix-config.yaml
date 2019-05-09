@@ -52,12 +52,12 @@ strains:
   - name: contributor-docs-staging
     <<: *basestrain
     url: https://adobedevsite.helix-demo.xyz/contributor/docs
-    content: https://github.com/AdobeDocs/contributor.en.git#master
-    directoryIndex: help/introduction.html
+    content: https://github.com/abhishekchandran/contributor.en/help#master
+    directoryIndex: introduction.html
     package: developer-adobe-com/633d4dd15734e619449fd1b121d6e97d5a21b6ce
-  - name: staging
-    <<: *proxystrain
-    url: https://adobedevsite.helix-demo.xyz/
+  # - name: staging
+  #   <<: *proxystrain
+  #   url: https://adobedevsite.helix-demo.xyz/
 
   # === PRODUCTION URLS FOLLOW ===
   - name: launch-docs-production
@@ -81,9 +81,9 @@ strains:
   - name: contributor-docs-production
     <<: *basestrain
     url: https://developer.adobe.com/contributor/docs
-    content: https://github.com/AdobeDocs/contributor.en.git#master
-    directoryIndex: help/introduction.html
+    content: https://github.com/AdobeDocs/contributor.en.git/help#master
+    directoryIndex: introduction.html
     package: developer-adobe-com/633d4dd15734e619449fd1b121d6e97d5a21b6ce
-  - name: production
-    <<: *proxystrain
-    url: https://developer.adobe.com/
+  # - name: production
+  #   <<: *proxystrain
+  #   url: https://developer.adobe.com/
