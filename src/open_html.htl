@@ -226,6 +226,6 @@
     </div>
   </section>
   <section class="openPage-blog">
-    <esi:include src="/open.openFeed.html" />
+    <esi:include src="/open.openFeed.html"></esi:include>
   </section>
 </div>

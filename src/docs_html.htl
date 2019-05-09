@@ -37,7 +37,7 @@
         </label>
         <input type="checkbox" class="docsPage-navToggle" id="docsPage-navToggle" />
         <!-- include ${content.nav}.summary.html-->
-        <esi:include src="${content.nav}.summary.html" />
+        <esi:include src="${content.nav}.summary.html"></esi:include>
     </div>
     <div class="docsPage-content">
         <div class="docsPage-titleBar">
