@@ -36,7 +36,7 @@ function pre(context, action) {
   if (context.request.path.match(/^\/open(\.html)?(\/index.html)?$/i)) {
     // open page
     context.dispatch.url = 'index.open.html';
-  } else if (action.request.params.rootPath.match('/docs')) {
+  } else if (action.request.params.rootPath && action.request.params.rootPath.match('/docs')) {
     context.dispatch.url = context.request.path.replace(/\.html/, '.docs.html');
   } else if (!action.request.params.rootPath && context.request.path.match('index.html')) {
     // home page

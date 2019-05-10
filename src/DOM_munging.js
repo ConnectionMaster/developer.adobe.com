@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-DOMUtil = {
+const DOMUtil = {
   addClass(document, selector, classNames) {
     document.querySelectorAll(selector).forEach((element) => {
       classNames.split(' ').forEach(className => element.classList.add(className));
@@ -63,7 +63,7 @@ DOMUtil = {
       }
     });
     return allText.filter(word => word.length && word.match(/^\w+\W?$/i));
-  }
+  },
 };
 
 module.exports = DOMUtil;

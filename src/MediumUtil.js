@@ -16,22 +16,23 @@ const RSSParser = require('rss-parser');
 const moment = require('moment');
 const DOMUtil = require('./DOM_munging.js');
 
-let rss = new RSSParser();
+const rss = new RSSParser();
+
 const { JSDOM } = jsdom;
 const dom = new JSDOM();
 
 function formatPostAsHTML(post) {
-  let { 
+  const {
     creator,
     title,
     link,
-    pubDate
   } = post;
+  let { pubDate } = post;
 
   const pubMoment = moment(pubDate);
   pubDate = `${pubMoment.format('MMM Do')} ${(moment().year() !== pubMoment.year() ? pubMoment.year() : '')}`;
 
-  let temp = dom.window.document.createElement('div');
+  const temp = dom.window.document.createElement('div');
   temp.innerHTML = post['content:encoded'];
   // brief googling yields a rough math of 265 words per minute read time
   const allWords = DOMUtil.getAllWords(temp);
@@ -59,17 +60,19 @@ function formatPostAsHTML(post) {
   };
 }
 
-async function getPostsAsHTML(url, length = 3) {
-    // pull recent blog posts from medium
+async function getPostsAsHTML(logger, url, length = 3) {
+  // pull recent blog posts from medium
+  let feed = [];
   try {
-    let feed = await rss.parseURL(url);
-    return feed.items.slice(0, length).map(formatPostAsHTML);
+    feed = await rss.parseURL(url);
   } catch (e) {
-    console.log(`Error attempting to parse Adobe rss feed at: ${url} => ${e.stack || e}`);
+    logger.error(`Error attempting to parse Adobe rss feed at: ${url} => ${e.stack || e}`);
+    return [];
   }
+  return feed.items.slice(0, length).map(formatPostAsHTML);
 }
 
 const MediumUtil = {
-  getPostsAsHTML
-}
+  getPostsAsHTML,
+};
 module.exports = MediumUtil;

@@ -70,7 +70,7 @@ function filterNav(document, path, logger, mountPoint) {
     DOMUtil.replaceLinks(document.body, mountPoint);
     DOMUtil.spectrumify(document.body);
     let nav = Array.from(document.body.children);
-    
+
     // remove first title
     if (nav && nav.length > 0) {
       nav = nav.slice(1);
@@ -107,7 +107,7 @@ async function pre(context, action) {
   } = action;
 
   logger.debug(`summary_html.pre.js - Requested path: ${action.request.params.path}`);
-  
+
   try {
     if (!context.content) {
       logger.debug('summary_html.pre.js - context has no resource, nothing we can do');
@@ -115,7 +115,7 @@ async function pre(context, action) {
     }
 
     const p = context;
-    
+
     // clean up the resource
     p.content.nav = filterNav(p.content.document,
       action.request.params.path,
