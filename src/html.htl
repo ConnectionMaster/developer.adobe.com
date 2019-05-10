@@ -30,10 +30,10 @@
 </head>
 
 <body class="spectrum spectrum--light spectrum-Typography">
-    <esi:include src="/global.topnav.html"></esi:include>
+    <esi:include src="global.topnav.html"></esi:include>
     <esi:include src="${payload.dispatch.url}"></esi:include>
-    <esi:include src="/global.footer.html"></esi:include>
-    <script src="/global/intersection-observer.js" type="text/javascript"></script>
+    <esi:include src="global.footer.html"></esi:include>
+    <script src="/static/global/intersection-observer.js" type="text/javascript"></script>
     <script type="text/javascript">
         ;
         (function (AD, undefined) {
