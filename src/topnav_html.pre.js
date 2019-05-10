@@ -17,7 +17,7 @@
 // that calls next (after modifying the payload a bit)
 async function pre(payload, action) {
   const { logger } = action;
-  logger.info('open pre.js');
+  logger.info('topnav pre.js');
   return payload;
 }
 
