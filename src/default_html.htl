@@ -124,7 +124,7 @@
   <div class="homePage-thirdSection">
 
       <div class="homePage-thirdSection-grid spectrum-grid spectrum-grid--fixed">
-        <esi:include src="index.feed.html"></esi:include>
+        <esi:include src="/static/index.feed.html"></esi:include>
 
         <div class="homePage-topRepos">
           <div class="homePage-topRepos-shadows"></div>
