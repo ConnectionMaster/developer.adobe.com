@@ -1,7 +1,7 @@
-<link rel="stylesheet" href="/spectrum/spectrum-dark.css" />
-<link rel="stylesheet" href="/spectrum/spectrum-darkest.css" />
-<link rel="stylesheet" href="/spectrum/spectrum-css-grid.css" />
-<link rel="stylesheet" href="/pages/home/home.css" />
+<link rel="stylesheet" href="/static/spectrum/spectrum-dark.css" />
+<link rel="stylesheet" href="/static/spectrum/spectrum-darkest.css" />
+<link rel="stylesheet" href="/static/spectrum/spectrum-css-grid.css" />
+<link rel="stylesheet" href="/static/pages/home/home.css" />
 
 <div class="page-container homePage">
 
@@ -15,7 +15,7 @@
         Do More with Adobe
       </h2>
       <p class="spectrum-Body3">
-        Customize and extend Adobe’s products to create better customer experiences with our APIs, 
+        Customize and extend Adobe’s products to create better customer experiences with our APIs,
         help guides and community support.
       </p>
       <div class="search-control">
@@ -23,16 +23,16 @@
           <label for="search-input" class="spectrum-FieldLabel">
             Search our products and documentation
           </label>
-          <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Icon--sizeS spectrum-DecoratedTextfield-icon" 
+          <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Icon--sizeS spectrum-DecoratedTextfield-icon"
             focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Magnifier"></use>
           </svg>
-          <input id="search-input" class="spectrum-Textfield spectrum-DecoratedTextfield-field" 
+          <input id="search-input" class="spectrum-Textfield spectrum-DecoratedTextfield-field"
             aria-invalid="false" type="text" >
         </div>
       </div>
     </div>
-  
+
     <!-- Creative Cloud -->
     <div class="homePage-xd">
 
@@ -47,8 +47,8 @@
       </header>
 
       <p class="spectrum-Body3">
-        Create XD plugins to push the boundaries of experience design by adding new features to 
-        <a href="https://adobexdplatform.com/" class="spectrum-Link">Adobe XD</a>, automating workflows, 
+        Create XD plugins to push the boundaries of experience design by adding new features to
+        <a href="https://adobexdplatform.com/" class="spectrum-Link">Adobe XD</a>, automating workflows,
         connecting XD to external services, and more—all on a quick, modern JavaScript engine with native UI components.
       </p>
       <p class="spectrum-Body3">
@@ -73,7 +73,7 @@
           <p class="spectrum-Body4">
             Adobe Cloud Platform APIs use the OAuth 2.0 protocol for authentication and authorization.
           </p>
-          <a href="https://adobeioruntime.net/api/v1/web/io-solutions/adobe-oauth-playground/oauth.html" 
+          <a href="https://adobeioruntime.net/api/v1/web/io-solutions/adobe-oauth-playground/oauth.html"
             class="spectrum-Link spectrum-Button spectrum-Button--cta">
             Read our Guide
           </a>
@@ -86,7 +86,7 @@
             JWT Quickstart
           </h3>
           <p class="spectrum-Body4">
-            API services tied to entitled Adobe products require a JSON Web Token (JWT) to retrieve access 
+            API services tied to entitled Adobe products require a JSON Web Token (JWT) to retrieve access
             tokens for usage against authenticated endpoints.
           </p>
           <a href="https://www.adobe.io/authentication/auth-methods.html#!adobeio/adobeio-documentation/master/auth/JWTAuthenticationQuickStart.md" class="spectrum-Link spectrum-Button spectrum-Button--cta button-read">
@@ -94,7 +94,7 @@
           </a>
         </div>
       </div>
-    
+
       <!-- Product Spotlight -->
       <div class="homePage-productSpotlight spectrum--light">
         <p class="spectrum-Body5">
@@ -107,8 +107,8 @@
           Adobe Analytics APIs
         </h2>
         <p class="spectrum-Body4">
-          The Adobe Analytics APIs are a collection of APIs that power Adobe Analytics products like Analysis Workspace. 
-          The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data. 
+          The Adobe Analytics APIs are a collection of APIs that power Adobe Analytics products like Analysis Workspace.
+          The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data.
           You can also create reports to explore, get insights, or answer important questions about your data.
         </p>
         <p class="spectrum-Body3">
@@ -227,7 +227,7 @@
             </div>
           </div>
         </div>
-      
+
         <!-- Newsletter Signup -->
         <div class="homePage-newsletterSignup spectrum--darkest">
           <h2 class="spectrum-Heading2--quiet">
