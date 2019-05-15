@@ -17,7 +17,6 @@ async function pre(context, action) {
   const { logger } = action;
   const { content } = context;
   content.mediumArticles = await MediumUtil.getPostsAsHTML(logger, 'https://medium.com/feed/adobetech');
-  logger.info(content.mediumArticles);
   return context;
 }
 

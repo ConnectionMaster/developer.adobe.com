@@ -62,6 +62,7 @@ function formatPostAsHTML(post) {
 
 async function getPostsAsHTML(logger, url, length = 3) {
   // pull recent blog posts from medium
+  logger.info(`Loading ${length} articles from ${url}`);
   let feed = [];
   try {
     feed = await rss.parseURL(url);
