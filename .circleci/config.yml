@@ -127,7 +127,27 @@ jobs:
             pkill sc
             sleep 5 # shutting down the tunnel usually takes a few second, lets let it clean up gracefully
 
-  deploy_commit_and_publish:
+  deploy_to_staging_and_test:
+    executor: helix
+    steps:
+      - setup_fs
+      - run:
+          name: modify default repo for staging to match current branch
+          command: sed -i "s/devRepo https:\/\/github.com\/adobe\/developer.adobe.com.git#REPLACED_BY_CI/devRepo https:\/\/github.com\/adobe\/developer.adobe.com.git#$CIRCLE_BRANCH/g" helix-config.yaml
+      - run:
+          name: hlx deploy dirty
+          command: npm run deploy -- --dirty
+      - run:
+          name: hlx publish to dev
+          command: npm run publish:dev
+      - run:
+          name: Run end to end tests against dev
+          command: npm run test:e2e-helix-sauce -- --baseUrl https://adobedevsite.helix-demo.xyz
+          environment:
+            NO_TUNNEL: true
+
+
+  deploy_to_production_and_commit:
     executor: helix
     steps:
       - setup_fs
@@ -145,14 +165,21 @@ jobs:
             git pull --tags origin
             git commit -am "🚢 enshrining config post-deploy [ci skip]"
       - run:
-          name: hlx publish
-          command: npm run publish
-      # TODO: should we `curl` the site's strains to warm the fastly cache up?
+          name: hlx publish staging (not production yet)
+          command: npm run publish:staging
+      - run:
+          name: Run end to end tests on sauce against staging environment
+          command: npm run test:e2e-helix-sauce -- --baseUrl https://adobedevsite.helix-demo.xyz
+          environment:
+            NO_TUNNEL: true
+      - run:
+          name: hlx publish production
+          command: npm run publish:production
       - run:
           name: Run end to end tests on sauce against production site
           command: npm run test:e2e-helix-sauce
           environment:
-            POSTPUBLISH: true
+            NO_TUNNEL: true
       # post status of above post-publish end to end tests
       - slack/status # status posts to a slack webhook that is picked up via circleci env var
       - run:
@@ -184,13 +211,25 @@ workflows:
       - end_to_end_localhost_tests:
           requires:
             - build
-      # last deploy step relies on tests to pass; fan back in
-      - deploy_commit_and_publish:
+      # deploy to dev environment and run e2e tests there
+      # only run on branches
+      - deploy_to_staging_and_test:
+          filters:
+            branches:
+              ignore: master
           requires:
             - lint
             - unit_tests
             - config_tests
             - end_to_end_localhost_tests
+      # deploy to staging and run e2e tests there; if good, deploy to prod and
+      # run e2e tests there. if good, finally tag and commit
+      - deploy_to_production_and_commit:
           filters:
             branches:
               only: master
+          requires:
+            - lint
+            - unit_tests
+            - config_tests
+            - end_to_end_localhost_tests

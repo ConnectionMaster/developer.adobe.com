@@ -126,20 +126,19 @@ The target environments, from least public-facing to most, are as follows:
    paths/URLs is managed by local-specific helix strains in `helix-config.yaml`.
 2. **Pull-Request-Specific**. *TODO* How to deploy and access this environment
    is still a work-in-progress. The ideal implementation of this environment
-   would provide a publicly-accessible URL. This likely requires a specific
-   cookie or header to be set to view this deployment which could be easily done
-   by stakeholders interested by installing a browser extension.
-3. **Staging**. We have a staging domain set up which is used when code lands in
-   the `master` branch: https://adobedevsite.helix-demo.xyz. This environment is
-   the first location where reviewed and approved code lands. A fully automated
-   test suite would execute against this environment. *TODO* (not implemented yet,
-   this is difficult with Helix): If any failures arise, we stop the [delivery pipeline](#delivery-pipeline-implementation)
+   would provide a publicly-accessible URL dedicated to the pull request. In the
+   mean time, every pull request open or update follows the **Staging** flow...
+3. **Staging**. We have a staging domain set up: https://adobedevsite.helix-demo.xyz.
+   When a pull request is opened or updated, or when code is pushed to the
+   `master` branch, code is deployed and published to this environment. A fully
+   automated test suite executes against this environment. This is the final destination
+   for pull request code. However, for code landing in the `master` branch, if
+   any failures arise, we stop the [delivery pipeline](#delivery-pipeline-implementation)
    from executing so that no regressions land in...
-4. **Production**. Our public environment. *TODO*: If our test suite passes in our
-   staging environment, then the [delivery
-   pipeline](#delivery-pipeline-implementation) will continue its execution and
-   push changes up to production automatically. The production environment
-   target is https://developer.adobe.com.
+4. **Production**. Our public environment: https://developer.adobe.com. If our
+   test suite passes in our staging environment, then the
+   [delivery pipeline](#delivery-pipeline-implementation) will continue its execution
+   and push changes up to production automatically.
 
 ### Delivery Pipeline Implementation
 
@@ -149,15 +148,20 @@ environments in order to enable previewing and testing of pull requests.
 It is always best to read the source so don't be afraid to look at the
 [CircleCI config file](`../.circleci/config.yaml) - best to start by looking at
 the [`continuously_deploy` workflow
-definition](https://github.com/adobe/developer.adobe.com/blob/master/.circleci/config.yml#L160). [Continuous deployment only
-operates on the `master`
-branch](https://github.com/adobe/developer.adobe.com/blob/master/.circleci/config.yml#L182-L184) and a high-level overview includes:
+definition](https://github.com/adobe/developer.adobe.com/blob/master/.circleci/config.yml#L195).
+Pull requests are deployed to our staging [environment](#environments). Commits
+to the `master` branch deploy to both the staging as well as production
+[environments](#environments). A high-level overview of what happens:
 
-1. [Install, build and
-   test](https://github.com/adobe/developer.adobe.com/blob/master/.circleci/config.yml#L162-L175) the commit - just like we do on pull requests.
-2. [Deploy, test, publish, test again, and finally commit and
-   tag](https://github.com/adobe/developer.adobe.com/blob/master/.circleci/config.yml#L177)
-   the repo as a known-good state.
+1. Install dependencies, build the helix site, and run tests on a local
+   instance of helix.
+2. If this passes, we deploy the site to our staging
+   [environment](#environments) and run end-to-end tests against its public URL.
+   Pull requests do not proceed beyond this step.
+3. On commits to `master`, if the step above passes, then we deploy to our
+   production [environment](#environment) and run a final pass of end-to-end
+   tests. If this is successful, we tag the state of the repo with a known-good
+   tag (for use in site rollbacks in the future if we decide we need it).
 
 #### Delivery Pipeline TODOs
 
@@ -171,8 +175,4 @@ branch](https://github.com/adobe/developer.adobe.com/blob/master/.circleci/confi
     [adobe/helix-cli#582](https://github.com/adobe/helix-cli/issues/582)
 - [Calibre](https://calibreapp.com) can be used for thresholds for different environments
     which can be used. A [micro service is already wrapping it in helix](https://github.com/adobe/helix-perf).
-- Test against runtime and test against simulation. Each function is not going
-    throwing any exception. Once you know code is running as it should, or functionally
-    it is doing what it is suppose to.
 - Test new code on new strain where it will see no actual traffic.
-- Fuzzy dom comparison tool: Wildcard comparison can be done.

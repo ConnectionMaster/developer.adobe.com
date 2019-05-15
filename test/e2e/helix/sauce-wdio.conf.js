@@ -82,7 +82,7 @@ exports.config = {
     build: process.env.CIRCLE_BUILD_NUM || `local-build-${(new Date()).valueOf()}`,
     // public visibility so anyone can view the job details on app.saucelabs.com
     public: 'public',
-    tunnelIdentifier: (!process.env.POSTPUBLISH && process.env.CIRCLE_BUILD_NUM
+    tunnelIdentifier: (!process.env.NO_TUNNEL && process.env.CIRCLE_BUILD_NUM
       ? process.env.SAUCELABS_USER
       : null
     ),

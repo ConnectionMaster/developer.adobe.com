@@ -18,14 +18,16 @@ const { strains } = config;
 
 const STAGING_URL = 'https://adobedevsite.helix-demo.xyz';
 const PRODUCTION_URL = 'https://developer.adobe.com';
+const DEV_LABEL = 'dev';
 const STAGING_LABEL = 'staging';
 const PRODUCTION_LABEL = 'production';
 
 describe('helix-config.yaml static analysis', () => {
-  it('should use the adobedevsite.helix-demo.xyz domain for all staging strains', () => {
-    const staging = strains.filter(s => s.name.endsWith(STAGING_LABEL));
-    staging.forEach((strain) => {
-      assert(strain.url.startsWith(STAGING_URL), `found a strain whose name ends with ${STAGING_LABEL} but does not use staging URL! ${JSON.stringify(strain)}`);
+  it('should use the adobedevsite.helix-demo.xyz domain for all staging and dev strains', () => {
+    const devstaging = strains.filter(s => s.name.endsWith(STAGING_LABEL)
+      || s.name.endsWith(DEV_LABEL));
+    devstaging.forEach((strain) => {
+      assert(strain.url.startsWith(STAGING_URL), `found a dev or staging strain but does not use staging URL! ${JSON.stringify(strain)}`);
     });
   });
   it('should use the developer.adobe.com domain for all production strains', () => {
@@ -43,8 +45,8 @@ describe('helix-config.yaml static analysis', () => {
     const invalid = strains.find(s => s.name !== 'default' && !s.url.startsWith(STAGING_URL) && !s.url.startsWith(PRODUCTION_URL));
     assert.equal(invalid, undefined, `found strains with invalid URLs! ${JSON.stringify(invalid)}`);
   });
-  it('should not define any strains not named staging or production', () => {
-    const invalid = strains.find(s => s.name !== 'default' && !s.name.endsWith(STAGING_LABEL) && !s.name.endsWith(PRODUCTION_LABEL));
+  it('should not define any strains not named dev, staging or production', () => {
+    const invalid = strains.find(s => s.name !== 'default' && !s.name.endsWith(STAGING_LABEL) && !s.name.endsWith(PRODUCTION_LABEL) && !s.name.endsWith(DEV_LABEL));
     assert.equal(invalid, undefined, `found strains with invalid names! ${JSON.stringify(invalid)}`);
   });
 });

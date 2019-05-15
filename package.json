@@ -18,8 +18,10 @@
     "test:helix-config": "mocha --exit test/helix-config/*",
     "test": "npm run lint && npm run test:helix-config && npm run test:unit && npm run test:e2e-helix-local",
     "build": "hlx clean && hlx build",
-    "deploy": "hlx deploy --no-auto --default HTTP_TIMEOUT 5000",
-    "publish": "hlx publish",
+    "deploy": "hlx deploy --default HTTP_TIMEOUT 5000",
+    "publish:dev": "hlx publish --log-level=debug --only \"*dev\"",
+    "publish:staging": "hlx publish --log-level=debug --only \"*staging\"",
+    "publish:production": "hlx publish --log-level=debug --only \"*production\"",
     "start": "hlx up --host adobedevsite.helix-demo.xyz --local-repo=."
   },
   "repository": {
