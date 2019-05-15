@@ -34,7 +34,7 @@
   },
   "homepage": "https://developer.adobe.com",
   "dependencies": {
-    "@adobe/helix-cli": "2.2.1",
+    "@adobe/helix-cli": "2.5.4",
     "jsdom": "^15.0.0",
     "moment": "^2.24.0",
     "request": "^2.88.0",
