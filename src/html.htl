@@ -29,7 +29,7 @@
     <title>${content.title}</title>
 </head>
 
-<body class="spectrum spectrum--light spectrum-Typography">
+<body class="spectrum spectrum-Typography">
     <esi:include src="/static/global.topnav.html"></esi:include>
     <esi:include src="/static/${payload.dispatch.url}"></esi:include>
     <esi:include src="/static/global.footer.html"></esi:include>
