@@ -44,7 +44,7 @@ function formatPostAsHTML(post) {
   let caption = `${firstParagraphContent} ${secondParagraphContent}`;
   if (caption.length > 340) {
     caption = caption.substring(0, 340);
-    caption = caption.replace(/\w+$/, 'ohmygod');
+    caption = caption.replace(/\w+$/, '...');
   }
   temp.innerHTML = caption;
   DOMUtil.spectrumify(temp);
