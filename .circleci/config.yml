@@ -127,12 +127,12 @@ jobs:
             pkill sc
             sleep 5 # shutting down the tunnel usually takes a few second, lets let it clean up gracefully
 
-  deploy_to_staging_and_test:
+  deploy_to_dev_and_test:
     executor: helix
     steps:
       - setup_fs
       - run:
-          name: modify default repo for staging to match current branch
+          name: modify default dev repo for dev environment to match current branch for its code
           command: sed -i "s/devRepo https:\/\/github.com\/adobe\/developer.adobe.com.git#REPLACED_BY_CI/devRepo https:\/\/github.com\/adobe\/developer.adobe.com.git#$CIRCLE_BRANCH/g" helix-config.yaml
       - run:
           name: hlx deploy dirty
@@ -147,12 +147,12 @@ jobs:
             NO_TUNNEL: true
 
 
-  deploy_to_production_and_commit:
+  deploy_to_staging_then_production_and_commit:
     executor: helix
     steps:
       - setup_fs
       - run:
-          name: hlx deploy
+          name: hlx deploy all strains
           command: npm run deploy
       - run:
           name: Run post-deploy tests
@@ -165,7 +165,7 @@ jobs:
             git pull --tags origin
             git commit -am "🚢 enshrining config post-deploy [ci skip]"
       - run:
-          name: hlx publish staging (not production yet)
+          name: hlx publish to staging
           command: npm run publish:staging
       - run:
           name: Run end to end tests on sauce against staging environment
@@ -173,10 +173,10 @@ jobs:
           environment:
             NO_TUNNEL: true
       - run:
-          name: hlx publish production
+          name: hlx publish to production
           command: npm run publish:production
       - run:
-          name: Run end to end tests on sauce against production site
+          name: Run end to end tests on sauce against production environment
           command: npm run test:e2e-helix-sauce
           environment:
             NO_TUNNEL: true
@@ -211,9 +211,7 @@ workflows:
       - end_to_end_localhost_tests:
           requires:
             - build
-      # deploy to dev environment and run e2e tests there
-      # only run on branches
-      - deploy_to_staging_and_test:
+      - deploy_to_dev_and_test:
           filters:
             branches:
               ignore: master
@@ -224,7 +222,7 @@ workflows:
             - end_to_end_localhost_tests
       # deploy to staging and run e2e tests there; if good, deploy to prod and
       # run e2e tests there. if good, finally tag and commit
-      - deploy_to_production_and_commit:
+      - deploy_to_staging_then_production_and_commit:
           filters:
             branches:
               only: master
