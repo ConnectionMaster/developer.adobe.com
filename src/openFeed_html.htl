@@ -1,9 +1,18 @@
 <div  class="openPage-blog-grid spectrum-grid spectrum-grid--fixed" 
       data-sly-test="${content.mediumArticles}"
       data-sly-list="${content.mediumArticles}">
-  <div class="openPage-blog-postAbstract">
+  <div class="openPage-blog-postAbstract" data-sly-test="${itemList.first}">
     <h1 class="spectrum-Heading2--quiet">${item.title}</h1>
     <p class="spectrum-Body4">${item.caption}</p>
     <a href="${item.link}" class="spectrum-Button spectrum-Button--primary">Read the post</a>
   </div>
+  <a href="${item.link}" class="openPage-blog-postAbstract" data-sly-test="${!itemList.first}">
+    <span class="openPage-blog-postMetadata">
+      <span>Jan 2</span>
+      <span>2 min read</span>
+      <span>Kerri Shotts</span>
+    </span>
+    <h1 class="spectrum-Heading2--quiet">${item.title}</h1>
+    <p class="spectrum-Body4">${item.caption}</p>
+  </a>
 </div>
