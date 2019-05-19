@@ -62,6 +62,6 @@
     "sinon": "^7.3.1",
     "supertest": "^4.0.2",
     "wdio-chromedriver-service": "5.0.1",
-    "webdriverio": "5.8.5"
+    "webdriverio": "5.8.6"
   }
 }
