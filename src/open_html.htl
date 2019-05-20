@@ -5,140 +5,108 @@
 <link rel="stylesheet" href="/static/pages/open/open.css" />
 
 <div class="page-container openPage">
-  <section class="openPage-hero spectrum--lightest">
-    <div class="openPage-heroContainer">
-      <figure class="openPage-hero-activity">
-        <svg id="openPage-visualization" width="100%" height="100%" viewBox="0 0 590 525" version="1.1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink">
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="Artboard" transform="translate(-49.000000, -50.000000)">
-              <g id="Group" transform="translate(49.000000, 50.000000)">
-                <g id="Rings" transform="translate(21.200000, 3.000000)" fill="#000000" fill-rule="nonzero">
-                  <path
-                    d="M260.7,1 C295.8,1 329.8,7.9 361.8,21.4 C392.7,34.5 420.5,53.2 444.4,77.1 C468.3,101 487,128.7 500.1,159.7 C513.6,191.7 520.5,225.7 520.5,260.8 C520.5,295.9 513.6,329.9 500.1,361.9 C487,392.8 468.3,420.6 444.4,444.5 C420.5,468.4 392.8,487.1 361.8,500.2 C329.8,513.7 295.8,520.6 260.7,520.6 C225.6,520.6 191.6,513.7 159.6,500.2 C128.7,487.1 100.9,468.4 77,444.5 C53.1,420.6 34.4,392.9 21.3,361.9 C7.8,329.9 0.9,295.9 0.9,260.8 C0.9,225.7 7.8,191.7 21.3,159.7 C34.4,128.8 53.1,101 77,77.1 C100.9,53.2 128.6,34.5 159.6,21.4 C191.6,7.9 225.6,1 260.7,1 L260.7,1 Z M260.7,0 C116.7,0 0,116.7 0,260.7 C0,404.7 116.7,521.4 260.7,521.4 C404.7,521.4 521.4,404.7 521.4,260.7 C521.4,116.7 404.7,0 260.7,0 L260.7,0 Z"
-                    id="Ring3"></path>
-                  <path
-                    d="M260.7,112.4 C300.3,112.4 337.6,127.8 365.6,155.8 C393.6,183.8 409,221.1 409,260.7 C409,300.3 393.6,337.6 365.6,365.6 C337.6,393.6 300.3,409 260.7,409 C221.1,409 183.8,393.6 155.8,365.6 C127.8,337.6 112.4,300.3 112.4,260.7 C112.4,221.1 127.8,183.8 155.8,155.8 C183.8,127.9 221.1,112.4 260.7,112.4 L260.7,112.4 Z M260.7,111.4 C178.2,111.4 111.4,178.3 111.4,260.7 C111.4,343.2 178.3,410 260.7,410 C343.2,410 410,343.1 410,260.7 C410,178.3 343.2,111.4 260.7,111.4 L260.7,111.4 Z"
-                    id="Ring2"></path>
-                  <path
-                    d="M260.7,187.1 C301.3,187.1 334.4,220.1 334.4,260.8 C334.4,301.5 301.4,334.5 260.7,334.5 C220,334.5 187,301.5 187,260.8 C187,220.1 220.1,187.1 260.7,187.1 L260.7,187.1 Z M260.7,186.1 C219.5,186.1 186,219.5 186,260.8 C186,302 219.4,335.5 260.7,335.5 C301.9,335.5 335.4,302.1 335.4,260.8 C335.4,219.5 301.9,186.1 260.7,186.1 L260.7,186.1 Z"
-                    id="Ring1"></path>
-                  <path
-                    d="M260.7,235.7 C274.5,235.7 285.8,246.9 285.8,260.8 C285.8,274.7 274.6,285.9 260.7,285.9 C246.8,285.9 235.6,274.7 235.6,260.8 C235.6,246.9 246.9,235.7 260.7,235.7 L260.7,235.7 Z M260.7,234.7 C246.3,234.7 234.6,246.4 234.6,260.8 C234.6,275.2 246.3,286.9 260.7,286.9 C275.1,286.9 286.8,275.2 286.8,260.8 C286.8,246.4 275.1,234.7 260.7,234.7 L260.7,234.7 Z"
-                    id="Ring0"></path>
-                </g>
-                <g id="Xes" transform="translate(0.000000, 87.000000)" stroke="#000000">
-                  <g id="X10" transform="translate(135.000000, 68.000000)">
-                    <path d="M0,0 L10.9,11" id="Path"></path>
-                    <path d="M10.9,0 L0,11" id="Path"></path>
+  <section class="openPage-hero spectrum--lightest spectrum-grid spectrum-grid--fixed">
+    <figure class="openPage-hero-activity">
+      <svg id="openPage-visualization" width="100%" viewBox="0 0 700 700"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Group" transform="translate(25.000000, 13.000000)">
+                  <g id="Rings" transform="translate(1.000000, 3.000000)" fill="#000000" fill-rule="nonzero">
+                      <path d="M323.627586,1.24137931 C367.2,1.24137931 409.406897,9.80689655 449.131034,26.5655172 C487.489655,42.8275862 522,66.0413793 551.668966,95.7103448 C581.337931,125.37931 604.551724,159.765517 620.813793,198.248276 C637.572414,237.972414 646.137931,280.17931 646.137931,323.751724 C646.137931,367.324138 637.572414,409.531034 620.813793,449.255172 C604.551724,487.613793 581.337931,522.124138 551.668966,551.793103 C522,581.462069 487.613793,604.675862 449.131034,620.937931 C409.406897,637.696552 367.2,646.262069 323.627586,646.262069 C280.055172,646.262069 237.848276,637.696552 198.124138,620.937931 C159.765517,604.675862 125.255172,581.462069 95.5862069,551.793103 C65.9172414,522.124138 42.7034483,487.737931 26.4413793,449.255172 C9.68275862,409.531034 1.11724138,367.324138 1.11724138,323.751724 C1.11724138,280.17931 9.68275862,237.972414 26.4413793,198.248276 C42.7034483,159.889655 65.9172414,125.37931 95.5862069,95.7103448 C125.255172,66.0413793 159.641379,42.8275862 198.124138,26.5655172 C237.848276,9.80689655 280.055172,1.24137931 323.627586,1.24137931 L323.627586,1.24137931 Z M323.627586,0 C144.868966,0 0,144.868966 0,323.627586 C0,502.386207 144.868966,647.255172 323.627586,647.255172 C502.386207,647.255172 647.255172,502.386207 647.255172,323.627586 C647.255172,144.868966 502.386207,0 323.627586,0 L323.627586,0 Z" id="Ring3"></path>
+                      <path d="M323.627586,139.531034 C372.786207,139.531034 419.089655,158.648276 453.848276,193.406897 C488.606897,228.165517 507.724138,274.468966 507.724138,323.627586 C507.724138,372.786207 488.606897,419.089655 453.848276,453.848276 C419.089655,488.606897 372.786207,507.724138 323.627586,507.724138 C274.468966,507.724138 228.165517,488.606897 193.406897,453.848276 C158.648276,419.089655 139.531034,372.786207 139.531034,323.627586 C139.531034,274.468966 158.648276,228.165517 193.406897,193.406897 C228.165517,158.772414 274.468966,139.531034 323.627586,139.531034 L323.627586,139.531034 Z M323.627586,138.289655 C221.213793,138.289655 138.289655,221.337931 138.289655,323.627586 C138.289655,426.041379 221.337931,508.965517 323.627586,508.965517 C426.041379,508.965517 508.965517,425.917241 508.965517,323.627586 C508.965517,221.337931 426.041379,138.289655 323.627586,138.289655 L323.627586,138.289655 Z" id="Ring2"></path>
+                      <path d="M323.627586,232.262069 C374.027586,232.262069 415.117241,273.227586 415.117241,323.751724 C415.117241,374.275862 374.151724,415.241379 323.627586,415.241379 C273.103448,415.241379 232.137931,374.275862 232.137931,323.751724 C232.137931,273.227586 273.227586,232.262069 323.627586,232.262069 L323.627586,232.262069 Z M323.627586,231.02069 C272.482759,231.02069 230.896552,272.482759 230.896552,323.751724 C230.896552,374.896552 272.358621,416.482759 323.627586,416.482759 C374.772414,416.482759 416.358621,375.02069 416.358621,323.751724 C416.358621,272.482759 374.772414,231.02069 323.627586,231.02069 L323.627586,231.02069 Z" id="Ring1"></path>
+                      <path d="M323.627586,292.593103 C340.758621,292.593103 354.786207,306.496552 354.786207,323.751724 C354.786207,341.006897 340.882759,354.910345 323.627586,354.910345 C306.372414,354.910345 292.468966,341.006897 292.468966,323.751724 C292.468966,306.496552 306.496552,292.593103 323.627586,292.593103 L323.627586,292.593103 Z M323.627586,291.351724 C305.751724,291.351724 291.227586,305.875862 291.227586,323.751724 C291.227586,341.627586 305.751724,356.151724 323.627586,356.151724 C341.503448,356.151724 356.027586,341.627586 356.027586,323.751724 C356.027586,305.875862 341.503448,291.351724 323.627586,291.351724 L323.627586,291.351724 Z" id="Ring0"></path>
                   </g>
-                  <g id="X9" transform="translate(332.000000, 19.000000)">
-                    <path d="M0.6,0.5 L11.6,11.5" id="Path"></path>
-                    <path d="M11.6,0.5 L0.6,11.5" id="Path"></path>
+                  <g id="Xes" transform="translate(0.000000, 108.000000)" stroke="#000000">
+                      <g id="X10" transform="translate(142.576687, 84.231024)">
+                          <path d="M0,0 L13.5302658,13.6256069" id="Path"></path>
+                          <path d="M13.5302658,0 L0,13.6256069" id="Path"></path>
+                      </g>
+                      <g id="X9" transform="translate(387.114519, 23.535139)">
+                          <path d="M0.744785276,0.619345766 L14.399182,14.2449526" id="Path"></path>
+                          <path d="M14.399182,0.619345766 L0.744785276,14.2449526" id="Path"></path>
+                      </g>
+                      <g id="X8" transform="translate(423.112474, 170.939431)">
+                          <path d="M0,0.495476613 L13.6543967,13.9972143" id="Path"></path>
+                          <path d="M13.6543967,0.495476613 L0,13.9972143" id="Path"></path>
+                      </g>
+                      <g id="X7" transform="translate(207.124744, 323.298490)">
+                          <path d="M0,0.247738306 L13.5302658,13.749476" id="Path"></path>
+                          <path d="M13.5302658,0.247738306 L0,13.749476" id="Path"></path>
+                      </g>
+                      <g id="X6" transform="translate(524.899796, 520.250444)">
+                          <path d="M0,0 L13.5302658,13.5017377" id="Path"></path>
+                          <path d="M13.5302658,0 L0,13.5017377" id="Path"></path>
+                      </g>
+                      <g id="X5" transform="translate(567.104294, 324.537181)">
+                          <path d="M0.372392638,0.495476613 L14.0267894,13.9972143" id="Path"></path>
+                          <path d="M14.0267894,0.495476613 L0.372392638,13.9972143" id="Path"></path>
+                      </g>
+                      <g id="X4" transform="translate(472.764826, 239.067466)">
+                          <path d="M0.620654397,0.743214919 L14.1509202,14.3688218" id="Path"></path>
+                          <path d="M14.1509202,0.743214919 L0.620654397,14.3688218" id="Path"></path>
+                      </g>
+                      <g id="X3" transform="translate(266.707566, 411.245589)">
+                          <path d="M0.744785276,0.37160746 L14.2750511,13.8733452" id="Path"></path>
+                          <path d="M14.2750511,0.37160746 L0.744785276,13.8733452" id="Path"></path>
+                      </g>
+                      <g id="X2" transform="translate(0.729630, 379.449029)">
+                          <path d="M0.117177914,0 L13.7715746,13.6256069" id="Path"></path>
+                          <path d="M13.7715746,0 L0.117177914,13.6256069" id="Path"></path>
+                      </g>
+                      <g id="X1" transform="translate(37.065440, 220.487093)">
+                          <path d="M0.868916155,0.247738306 L14.5233129,13.8733452" id="Path"></path>
+                          <path d="M14.5233129,0.247738306 L0.868916155,13.8733452" id="Path"></path>
+                      </g>
+                      <g id="X0" transform="translate(118.991820, 0.000000)">
+                          <path d="M0,0.990953226 L13.5302658,14.4926909" id="Path"></path>
+                          <path d="M13.5302658,0.990953226 L0,14.4926909" id="Path"></path>
+                      </g>
                   </g>
-                  <g id="X8" transform="translate(361.000000, 138.000000)">
-                    <path d="M0,0.4 L11,11.3" id="Path"></path>
-                    <path d="M11,0.4 L0,11.3" id="Path"></path>
+                  <g id="Triangles" transform="translate(77.000000, 0.000000)" fill-rule="nonzero">
+                      <path d="M178.434457,112.429777 L191.117603,133.850868 L165.751311,133.850868 L178.434457,112.429777 L178.434457,112.429777 Z M178.434457,109.95335 L163.513109,135.089082 L193.231461,135.089082 L178.434457,109.95335 L178.434457,109.95335 Z" id="Triangle3" fill="#000F00"></path>
+                      <path d="M23.7498127,2.35260546 L36.4329588,23.7736973 L11.0666667,23.7736973 L23.7498127,2.35260546 L23.7498127,2.35260546 Z M23.7498127,1.77635684e-15 L8.82846442,25.135732 L38.5468165,25.135732 L23.7498127,1.77635684e-15 L23.7498127,1.77635684e-15 Z" id="Triangle2" fill="#000000"></path>
+                      <path d="M14.9213483,476.340695 L27.6044944,497.761787 L2.23820225,497.761787 L14.9213483,476.340695 L14.9213483,476.340695 Z M14.9213483,473.864268 L-1.77635684e-15,499 L29.7183521,499 L14.9213483,473.864268 L14.9213483,473.864268 Z" id="Triangle1" fill="#000000"></path>
+                      <path d="M316.954307,36.1558313 L329.637453,57.5769231 L304.271161,57.5769231 L316.954307,36.1558313 L316.954307,36.1558313 Z M316.954307,33.6794045 L302.032959,58.8151365 L331.751311,58.8151365 L316.954307,33.6794045 L316.954307,33.6794045 Z" id="Triangle0" fill="#000000"></path>
                   </g>
-                  <g id="X7" transform="translate(187.000000, 261.000000)">
-                    <path d="M0,0.2 L10.9,11.1" id="Path"></path>
-                    <path d="M10.9,0.2 L0,11.1" id="Path"></path>
+                  <g id="Waves" transform="translate(176.000000, 306.000000)">
+                      <g id="Waves1" transform="translate(216.643022, 0.000000)" stroke="#000000">
+                          <path d="M1.42108547e-14,16.1515152 C14.2641718,16.1515152 14.2641718,30.9363636 28.4043074,30.9363636 C42.6684792,30.9363636 42.6684792,16.1515152 56.8086147,16.1515152 C71.0727865,16.1515152 71.0727865,30.9363636 85.2129221,30.9363636 C99.4770939,30.9363636 99.4770939,16.1515152 113.617229,16.1515152 C127.881401,16.1515152 127.881401,30.9363636 142.021537,30.9363636 C156.285709,30.9363636 156.285709,16.1515152 170.425844,16.1515152 C184.690016,16.1515152 184.690016,30.9363636 198.830152,30.9363636" id="Path"></path>
+                          <path d="M58.7931952,8.8817842e-16 C73.057367,8.8817842e-16 73.057367,14.7848485 87.1975025,14.7848485 C101.461674,14.7848485 101.461674,8.8817842e-16 115.60181,8.8817842e-16 C129.865982,8.8817842e-16 129.865982,14.7848485 144.006117,14.7848485 C158.270289,14.7848485 158.270289,8.8817842e-16 172.410425,8.8817842e-16 C186.674596,8.8817842e-16 186.674596,14.7848485 200.814732,14.7848485 C215.078904,14.7848485 215.078904,8.8817842e-16 229.219039,8.8817842e-16 C243.359175,8.8817842e-16 243.483211,14.7848485 257.623347,14.7848485" id="Path"></path>
+                      </g>
+                      <g id="Waves0" transform="translate(-0.000000, 253.206061)">
+                          <path d="M55.4442157,0 C69.7083875,0 69.7083875,14.7848485 83.848523,14.7848485 C98.1126949,14.7848485 98.1126949,0 112.25283,0 C126.517002,0 126.517002,14.7848485 140.657138,14.7848485 C154.92131,14.7848485 154.92131,0 169.061445,0 C183.325617,0 183.325617,14.7848485 197.465753,14.7848485 C211.729924,14.7848485 211.729924,0 225.87006,0 C240.134232,0 240.134232,14.7848485 254.274367,14.7848485" id="Path" stroke="#000000"></path>
+                          <g id="Group" transform="translate(0.000000, 16.896970)">
+                              <path d="M69.8324238,5.83939394 C66.8555531,3.10606061 63.5065737,0.745454545 57.9249412,0.745454545 C53.4596353,0.745454545 50.3587283,2.23636364 47.8780028,4.22424242" id="Path" stroke="#000000"></path>
+                              <path d="M3.7210883,0.993939394 C15.256462,2.73333333 16.2487522,15.530303 29.5206339,15.530303 C39.3194997,15.530303 42.2963704,8.57272727 47.8780028,4.22424242" id="Path" stroke="#000000"></path>
+                              <path d="M0.992290214,0.745454545 L3.7210883,0.993939394 C2.85283436,0.86969697 1.98458043,0.745454545 0.992290214,0.745454545 L0.992290214,0.745454545 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                              <path d="M69.8324238,5.83939394 C74.2977297,10.0636364 77.7707455,15.530303 86.3292486,15.530303 C93.3993164,15.530303 96.9963684,11.8030303 100.59342,8.2" id="Path" stroke="#000000"></path>
+                              <path d="M131.354417,10.4363636 C126.889111,6.21212121 123.416095,0.745454545 114.857592,0.745454545 C107.787524,0.745454545 104.190472,4.47272727 100.59342,8.07575758" id="Path" stroke="#000000"></path>
+                              <path d="M131.354417,10.4363636 C134.083215,13.0454545 137.184122,15.1575758 142.145573,15.530303" id="Path" stroke="#000000"></path>
+                          </g>
+                      </g>
                   </g>
-                  <g id="X6" transform="translate(443.000000, 420.000000)">
-                    <path d="M0,0 L10.9,10.9" id="Path"></path>
-                    <path d="M10.9,0 L0,10.9" id="Path"></path>
-                  </g>
-                  <g id="X5" transform="translate(477.000000, 262.000000)">
-                    <path d="M0.3,0.4 L11.3,11.3" id="Path"></path>
-                    <path d="M11.3,0.4 L0.3,11.3" id="Path"></path>
-                  </g>
-                  <g id="X4" transform="translate(401.000000, 193.000000)">
-                    <path d="M0.5,0.6 L11.4,11.6" id="Path"></path>
-                    <path d="M11.4,0.6 L0.5,11.6" id="Path"></path>
-                  </g>
-                  <g id="X3" transform="translate(235.000000, 332.000000)">
-                    <path d="M0.6,0.3 L11.5,11.2" id="Path"></path>
-                    <path d="M11.5,0.3 L0.6,11.2" id="Path"></path>
-                  </g>
-                  <g id="X2" transform="translate(0.000000, 241.000000)">
-                    <path d="M0.9,0 L11.9,11" id="Path"></path>
-                    <path d="M11.9,0 L0.9,11" id="Path"></path>
-                  </g>
-                  <g id="X1" transform="translate(50.000000, 178.000000)">
-                    <path d="M0.7,0.2 L11.7,11.2" id="Path"></path>
-                    <path d="M11.7,0.2 L0.7,11.2" id="Path"></path>
-                  </g>
-                  <g id="X0" transform="translate(116.000000, 0.000000)">
-                    <path d="M0,0.8 L10.9,11.7" id="Path"></path>
-                    <path d="M10.9,0.8 L0,11.7" id="Path"></path>
-                  </g>
-                </g>
-                <g id="Triangles" transform="translate(82.700000, 0.000000)" fill="#000000" fill-rule="nonzero">
-                  <path
-                    d="M143.5,90.8 L153.7,108.1 L133.3,108.1 L143.5,90.8 L143.5,90.8 Z M143.5,88.8 L131.5,109.1 L155.4,109.1 L143.5,88.8 L143.5,88.8 Z"
-                    id="Triangle3"></path>
-                  <path
-                    d="M19.1,1.9 L29.3,19.2 L8.9,19.2 L19.1,1.9 L19.1,1.9 Z M19.1,1.77635684e-15 L7.1,20.3 L31,20.3 L19.1,1.77635684e-15 L19.1,1.77635684e-15 Z"
-                    id="Triangle2"></path>
-                  <path
-                    d="M12,384.7 L22.2,402 L1.8,402 L12,384.7 L12,384.7 Z M12,382.7 L-1.77635684e-15,403 L23.9,403 L12,382.7 L12,382.7 Z"
-                    id="Triangle1"></path>
-                  <path
-                    d="M254.9,29.2 L265.1,46.5 L244.7,46.5 L254.9,29.2 L254.9,29.2 Z M254.9,27.2 L242.9,47.5 L266.8,47.5 L254.9,27.2 L254.9,27.2 Z"
-                    id="Triangle0"></path>
-                </g>
-                <g id="Waves" transform="translate(162.000000, 246.600000)">
-                  <g id="Waves1" transform="translate(220.000000, 0.000000)" stroke="#000000">
-                    <path
-                      d="M1.42108547e-14,13 C11.5,13 11.5,24.9 22.9,24.9 C34.4,24.9 34.4,13 45.8,13 C57.3,13 57.3,24.9 68.7,24.9 C80.2,24.9 80.2,13 91.6,13 C103.1,13 103.1,24.9 114.5,24.9 C126,24.9 126,13 137.4,13 C148.9,13 148.9,24.9 160.3,24.9"
-                      id="Path"></path>
-                    <path
-                      d="M47.4,8.8817842e-16 C58.9,8.8817842e-16 58.9,11.9 70.3,11.9 C81.8,11.9 81.8,8.8817842e-16 93.2,8.8817842e-16 C104.7,8.8817842e-16 104.7,11.9 116.1,11.9 C127.6,11.9 127.6,8.8817842e-16 139,8.8817842e-16 C150.5,8.8817842e-16 150.5,11.9 161.9,11.9 C173.4,11.9 173.4,8.8817842e-16 184.8,8.8817842e-16 C196.2,8.8817842e-16 196.3,11.9 207.7,11.9"
-                      id="Path"></path>
-                  </g>
-                  <g id="Waves0" transform="translate(-0.000000, 203.800000)">
-                    <path
-                      d="M44.7,0 C56.2,0 56.2,11.9 67.6,11.9 C79.1,11.9 79.1,0 90.5,0 C102,0 102,11.9 113.4,11.9 C124.9,11.9 124.9,0 136.3,0 C147.8,0 147.8,11.9 159.2,11.9 C170.7,11.9 170.7,0 182.1,0 C193.6,0 193.6,11.9 205,11.9"
-                      id="Path" stroke="#000000"></path>
-                    <g id="Group" transform="translate(0.000000, 13.600000)">
-                      <path d="M56.3,4.7 C53.9,2.5 51.2,0.6 46.7,0.6 C43.1,0.6 40.6,1.8 38.6,3.4" id="Path"
-                        stroke="#000000"></path>
-                      <path d="M3,0.8 C12.3,2.2 13.1,12.5 23.8,12.5 C31.7,12.5 34.1,6.9 38.6,3.4" id="Path"
-                        stroke="#000000"></path>
-                      <path d="M0.8,0.6 L3,0.8 C2.3,0.7 1.6,0.6 0.8,0.6 L0.8,0.6 Z" id="Path" fill="#000000"
-                        fill-rule="nonzero"></path>
-                      <path d="M56.3,4.7 C59.9,8.1 62.7,12.5 69.6,12.5 C75.3,12.5 78.2,9.5 81.1,6.6" id="Path"
-                        stroke="#000000"></path>
-                      <path d="M105.9,8.4 C102.3,5 99.5,0.6 92.6,0.6 C86.9,0.6 84,3.6 81.1,6.5" id="Path"
-                        stroke="#000000"></path>
-                      <path d="M105.9,8.4 C108.1,10.5 110.6,12.2 114.6,12.5" id="Path" stroke="#000000"></path>
-                    </g>
-                  </g>
-                </g>
               </g>
-            </g>
           </g>
-        </svg>
-      </figure>
-      <section class="openPage-hero-content">
-        <h2>Discover Adobe’s Open Source projects</h2>
-        <h1 class="spectrum-Heading1--quiet">Open Source at Adobe</h1>
-        <p class="openPage-hero-content-body">Adobe embraces, supports and relies on Open Source technology. Join our growing community and build with us in the open.</p>
-        <div class="openPage-hero-content-ctas">
-          <figure class="openPage-hero-content-ghLogo">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="GitHub">
-              <use xlink:href="#spectrum-icon-24-GitHub"></use>
-            </svg>
-          </figure>
-          <a target="_blank" rel="noopener noreferrer" href="http://github.com/adobe/" class="spectrum-Button spectrum-Button--primary">Adobe on Github</a>
-        </div>
-      </section>
-    </div>
+      </svg>
+    </figure>
+    <section class="openPage-hero-content">
+      <h2 class="openPage-hero-content-subtitle">Discover Adobe’s Open Source projects</h2>
+      <h1 class="openPage-hero-content-title">Open Source at Adobe</h1>
+      <p class="openPage-hero-content-body">Adobe embraces, supports and relies on Open Source technology. Join our growing community and build with us in the open.</p>
+      <div class="openPage-hero-content-ctas">
+        <figure class="openPage-hero-content-ghLogo">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="GitHub">
+            <use xlink:href="#spectrum-icon-24-GitHub"></use>
+          </svg>
+        </figure>
+        <a target="_blank" rel="noopener noreferrer" href="http://github.com/adobe/" class="spectrum-Button spectrum-Button--primary">Adobe on Github</a>
+      </div>
+    </section>
   </section>
-  <section class="openPage-orientation">
+  <section class="openPage-orientation spectrum-grid spectrum-grid--fixed">
     <div class="openPage-testimonial">
       <figure class="openPage-testimonial-avatar">
-        <img src="https://www.placecage.com/g/128/128" alt="A happy user" />
+        <img src="/pages/open/368b5013.david-nuescheler@2x.png" alt="A happy user" />
       </figure>
       <blockquote class="openPage-testimonial-quote">
         <h1>Open Source is more about the culture of how you develop software</h1>
@@ -177,29 +145,34 @@
     </div>
   </section>
   <section class="openPage-spotlight spectrum--dark">
-    <h1 class="openPage-spotlight-header">We built the Spectrum design language framework so that you can build better and faster.</h1>
-    <div class="openPage-spotlight-info">
-      <h1 class="spectrum-Heading2--quiet">Demos</h1>
-      <p>Check out the full range of Spectrum examples, from accordions, button styles,  form fields and nav permutations.</p>
-      <a href="http://github.com/adobe/" target="_blank" rel="noopener noreferrer" class="spectrum-Button spectrum-Button--primary">Spectrum on Github</a>
-      <a href="http://github.com/adobe/" target="_blank" rel="noopener noreferrer" class="spectrum-Button">Documentation</a>
-    </div>
-    <div class="openPage-spotlight-carousel">
-      <button>Next</button>
-      <button>Prev</button>
-      <div class="openPage-spotlight-carouselItem">
-        <figure>logo</figure>
-        <p>Product Spotlight</p>
-        <p>Spectrum CSS</p>
-        <p>The goal of this project is to provide a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe’s platforms.</p>
-        <a target="_blank" rel="noopener noreferrer" href="http://github.com/adobe/" class="spectrum-Button">Documentation</a>
+    <div class="spectrum-grid spectrum-grid--fixed">
+      <div class="openPage-spotlight-details">
+        <h1 class="openPage-spotlight-header">We built the Spectrum design language framework so that you can build better and faster.</h1>
+        <div class="openPage-spotlight-info">
+          <h1 class="spectrum-Heading2--quiet">Demos</h1>
+          <p>Check out the full range of Spectrum examples, from accordions, button styles,  form fields and nav permutations.</p>
+          <a href="http://github.com/adobe/" target="_blank" rel="noopener noreferrer" class="spectrum-Button spectrum-Button--primary">Spectrum on Github</a>
+          <a href="http://github.com/adobe/" target="_blank" rel="noopener noreferrer" class="spectrum-Button">Documentation</a>
+        </div>
+      </div>
+      <div class="openPage-spotlight-carousel">
+        <button>Next</button>
+        <button>Prev</button>
+        <div class="openPage-spotlight-carouselItem">
+          <figure>logo</figure>
+          <p>Product Spotlight</p>
+          <p>Spectrum CSS</p>
+          <p>The goal of this project is to provide a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe’s platforms.</p>
+          <a href="https://github.com/adobe/spectrum-css" target="_blank" class="spectrum-Button spectrum-Button--cta">Spectrum on Github</a>
+        </div>
       </div>
     </div>
-    <a href="https://github.com/adobe/spectrum-css" target="_blank" class="spectrum-Button spectrum-Button--cta">Spectrum on Github</a>
   </section>
-  <section class="openPage-popularProjects">
-    <h1 class="spectrum-Heading2--quiet">Popular projects</h1>
-    <p>Helping you find interesting open source</p>
+  <section class="openPage-popularProjects spectrum-grid spectrum-grid--fixed">
+    <div class="openPage-popularProjects-intro">
+        <h1 class="spectrum-Heading2--quiet">Popular projects</h1>
+        <p>Helping you find interesting open source</p>
+    </div>
     <div class="openPage-popularProjects-projectContainer">
       <div class="openPage-popularProjects-projectLogo"></div>
       <div class="openPage-popularProjects-projectInfo">
@@ -275,7 +248,7 @@
       </div>
     </div>
   </section>
-  <section class="openPage-standards spectrum-grid--nested">
+  <section class="openPage-standards spectrum-grid spectrum-grid--fixed">
     <div class="openPage-standards-intro">
       <h1>Open Standards</h1>
       <p>Adobe has a history of publishing and contributing to a number of open standards that guarantee the interoperability of our products and solutions.</p>
@@ -325,8 +298,8 @@
     </div>
   </section>
   <section class="openPage-partners">
-    <h1>Community partners & projects</h1>
-    <div class="openPage-partners-grid">
+    <div class="openPage-partners-container spectrum-grid spectrum-grid--fixed">
+      <h1>Community partners & projects</h1>
       <figure class="openPage-partnerItem">
         <img width="128" height="48" src="" data-src=""
           alt="Magento" />
